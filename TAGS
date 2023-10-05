@@ -1,0 +1,2443 @@
+
+buffers/buff_init.c,59
+# define BUFFSIZE 2,32
+uint8_t	*buff_init(buff_init4,55
+
+buffers/buffer_functions.c,144
+#define BUFFSIZE 14,912
+bool	buff_flush(16,934
+size_t	buff_get_remainder(25,1077
+bool	buff_write(35,1253
+char	*buff_init(buff_init57,1738
+
+buffers/buff_flush.c,22
+bool	buff_flush(4,46
+
+buffers/buff_write.c,24
+bool	buff_write(16,935
+
+buffers/buff_get_remainder.c,34
+size_t	buff_get_remainder(16,935
+
+buffers/buff_get_input.c,26
+void	buff_get_input(4,44
+
+buffers/buff_clear.c,22
+void	buff_clear(3,24
+
+buffers/buffers.h,49
+# define BUFFERS_H2,18
+# define BUFFSIZE 6,117
+
+strings/atoi.c,16
+int		atoi(3,22
+
+strings/strnext.c,28
+char	*strnext(strnext4,46
+
+strings/itoa.c,23
+char		*itoa(itoa3,22
+
+strings/strchr.c,26
+char	*strchr(strchr3,24
+
+strings/strcspn.c,21
+size_t	strcspn(4,25
+
+strings/putnbr.c,18
+void	putnbr(3,22
+
+strings/strstr.c,26
+char	*strstr(strstr4,48
+
+strings/intlen.c,16
+int	intlen(1,0
+
+strings/get_next_line.c,71
+void		augment_size(5,66
+int			get(22,481
+int			get_next_line(44,812
+
+strings/strlen.c,21
+size_t		strlen(3,24
+
+strings/strings.h,55
+# define _STRINGS_H_2,20
+# define GNL_BUFF_SIZE 3,41
+
+strings/strdup.c,26
+char	*strdup(strdup3,22
+
+strings/strclean.c,30
+char	*strclean(strclean3,24
+
+strings/putchar.c,19
+void	putchar(3,21
+
+strings/putstr.c,18
+void	putstr(4,44
+
+strings/strcmp.c,17
+int	strcmp(3,24
+
+strings/strncpy.c,20
+void	_strncpy(3,24
+
+strings/str_bin_search.c,25
+int	str_search_bin(3,33
+
+data-structures/stacks/wowie_lstacks.h,200
+#define _WOWIE_LSTACKS_H_2,26
+struct  s_lstack 6,116
+	t_list	*head;head7,135
+	t_list	*top;top8,150
+	size_t	top_pos;9,164
+	size_t	size;10,181
+typedef struct s_lstack *t_lstack;t_lstack13,199
+
+data-structures/stacks/stack_error.c,64
+const	char *__g_error_stk_messages[__g_error_stk_messages3,29
+
+data-structures/stacks/wowie_stacks.h,512
+#define _WOWIE_STACKS_H_2,25
+# define STACK_DEFAULT_SIZE 13,215
+struct	s_stack 18,284
+	void		**data;data19,301
+	int		top;20,316
+	size_t		max_entries;21,327
+	size_t		*entry_sizes;entry_sizes22,349
+	size_t		__debug_mem_usage;23,372
+enum	stack_err 27,412
+	E_STACK_FULL,28,429
+	E_STACK_EMPTY,29,444
+	E_STACK_OK,30,460
+	E_STACK_ALLOC_FAILED,31,473
+	E_STACK_ABNORMAL,32,496
+	__E_STK_MAX_ERR,33,515
+# define STK_ERR_ARRAY 37,597
+# define STKERR(38,643
+typedef struct s_stack	*t_stack;t_stack40,733
+
+data-structures/stacks/lstack_test.c,141
+#define UNUSED 4,69
+typedef struct	s_vec3{s_vec37,129
+	float x;8,152
+	float y;9,162
+	float z;10,172
+}		t_vec3;11,182
+int	main(13,226
+
+data-structures/stacks/stack_test.c,140
+#define UNUSED 3,47
+typedef struct	s_vec3{s_vec36,107
+	float x;7,130
+	float y;8,140
+	float z;9,150
+}		t_vec3;10,160
+int	main(12,204
+
+data-structures/stacks/wowie_stacks.c,421
+struct	s_stack 6,87
+	void		**data;data7,104
+	int		top;8,119
+	size_t		max_entries;9,130
+	size_t		*entry_sizes;entry_sizes10,152
+	size_t		__debug_mem_usage;11,175
+t_stack	stack_new(15,215
+void	stack_push(48,902
+void	*stack_pop(stack_pop71,1495
+void	*stack_peek(stack_peek91,1919
+bool	stack_empty(95,1990
+bool	stack_full(99,2054
+int	stack_top(103,2141
+int	stack_check(107,2195
+void	stack_cleanup(123,2475
+
+data-structures/stacks/wowie_lstacks.c,192
+t_lstack lstack_new(12,160
+void	lstack_push(26,438
+void	*lstack_pop(lstack_pop34,657
+bool	lstack_empty(43,952
+void	*lst_stack_peek(lst_stack_peek47,1010
+void	lst_stack_cleanup(51,1072
+
+data-structures/trees/tree_map.c,86
+void	tree_map_inorder(4,46
+void	tree_map_preorder(12,181
+void	tree_map_post(20,319
+
+data-structures/trees/tree_insert.c,23
+void	tree_insert(3,25
+
+data-structures/trees/tree_search.c,38
+t_tree	*tree_search(tree_search5,74
+
+data-structures/trees/tree_new.c,32
+t_tree	*tree_new(tree_new3,25
+
+data-structures/trees/wowie-tree-errors.c,66
+const char *__g_error_tree_messages[__g_error_tree_messages3,27
+
+data-structures/trees/tree_test.c,15
+int	main(6,86
+
+data-structures/trees/wowie_tree.h,307
+# define _TREE_H_2,17
+typedef struct	s_tree 6,85
+	struct	s_tree *l;l7,109
+	struct	s_tree *r;r8,128
+	void	*data;data9,147
+	size_t	size;10,160
+}		t_tree;11,174
+enum	tree_errors 13,186
+	E_TREE_ATTEMPTED_NULL,14,205
+	__E_TREE_MAX_ERR,15,229
+# define TREE_ERR_ARRAY 21,335
+# define TREEERR(22,383
+
+data-structures/trees/tree_delete.c,70
+void	node_clear(4,46
+void	tree_print(13,175
+void	tree_clear(19,284
+
+data-structures/data_structures.h,33
+#define _DATA_STRUCTURES_H_2,28
+
+data-structures/heaps/heaps.h,205
+# define _HEAPS_H_2,18
+#	define HEAP_TYPE 10,170
+# define HEAP_MAX 13,205
+typedef	struct	s_heap 15,228
+	HEAP_TYPE	*data;data16,252
+	int		size_max;17,270
+	int		size_current;18,286
+}		t_heap;19,306
+
+data-structures/heaps/wowie-heaps.c,489
+t_heap		*heap_create(heap_create3,20
+void	        heap_destroy(15,280
+void		heap_clear(20,356
+void		heap_double(25,466
+static void	heap_swap(36,734
+static void	heap_key_pushup(45,943
+static void	heap_key_pushdown(53,1121
+t_heap		*heap_heapify(heap_heapify66,1382
+void		heap_key_ins(76,1635
+int		heap_get_index_p(84,1852
+int		heap_get_index_l(88,1908
+int		heap_get_index_r(92,1964
+bool		heap_empty_p(96,2020
+HEAP_TYPE       heap_get_min(100,2107
+int		heap_min_del(104,2207
+
+data-structures/linked-lists/lst_search_brute_with_ref.c,69
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref22,769
+
+data-structures/linked-lists/lst_delete_lst.c,47
+t_list		*lst_delete_lst(lst_delete_lst21,716
+
+data-structures/linked-lists/lst_map.c,173
+t_list		*lst_map(lst_map3,26
+static void	__lst_mapr_inplace_internal(26,390
+t_list		*lst_mapr_inplace(lst_mapr_inplace33,569
+t_list		*lst_mapr_cpy(lst_mapr_cpy41,734
+
+data-structures/linked-lists/lst_find_prev.c,45
+t_list		*lst_find_prev(lst_find_prev21,593
+
+data-structures/linked-lists/lst_fold.c,31
+void		*lst_fold(lst_fold3,26
+
+data-structures/linked-lists/lst_insert_link_next.c,57
+t_list		*lst_insert_link_next(lst_insert_link_next3,26
+
+data-structures/linked-lists/lst_attach_end.c,47
+t_list		*lst_attach_end(lst_attach_end22,626
+
+data-structures/linked-lists/lst_search_brute_no_ref.c,65
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref21,666
+
+data-structures/linked-lists/wowie_lists.h,775
+# define _WOWIE_LISTS_H_2,24
+enum	lst_errors 10,151
+	E_NOERROR,11,169
+	E_LST_ATTACH_ATTEMPTED_NULL,12,181
+	E_LST_SEARCH_ATTEMPTED_NULL_HEAD,13,211
+	E_LST_SEARCH_ATTEMPTED_NULL_TAIL,14,246
+	E_LST_SEARCH_ATTEMPTED_NULL_FN,15,281
+	E_LST_FIND_NO_LIST,16,314
+	E_LST_MAP_ATTEMPTED_NULL,17,335
+	E_LST_MAP_ATTEMPTED_NULL_FN,18,362
+	E_LST_FOLD_ATTEMPTED_NULL_FN,19,392
+	E_LST_FOLD_ATTEMPTED_NULL_HEAD,20,423
+	E_LST_FOLD_TOO_SMALL,21,456
+	E_LST_DEL_ATTEMPTED_NULL,22,479
+	__E_LST_MAX_ERR,23,506
+	E_ALLOC_ATTEMPTED_0_SIZE,24,524
+	E_ALLOC_ATTEMPTED_NULL,25,551
+	E_ALLOC_FAILED,26,576
+typedef struct	s_list 29,597
+	void		*data;data30,621
+	size_t		size;31,635
+	struct	s_list	*next;next32,650
+}		t_list;33,672
+# define LST_ERR_ARRAY 37,764
+# define LSTERR(38,810
+
+data-structures/linked-lists/lst_delete_link.c,49
+t_list		*lst_delete_link(lst_delete_link24,892
+
+data-structures/linked-lists/wowie_lst_error.c,64
+const char *__g_error_lst_messages[__g_error_lst_messages3,28
+
+data-structures/linked-lists/lst_len.c,22
+size_t		lst_len(3,26
+
+data-structures/linked-lists/lst_insert_link_prev.c,57
+t_list		*lst_insert_link_prev(lst_insert_link_prev3,26
+
+data-structures/linked-lists/lst_find_end.c,43
+t_list		*lst_find_end(lst_find_end19,580
+
+data-structures/linked-lists/lst_cpy_link.c,40
+t_list	*lst_cpy_link(lst_cpy_link3,26
+
+data-structures/linked-lists/lst_clear.c,37
+t_list		*lst_clear(lst_clear20,676
+
+data-structures/linked-lists/lst_cpy_lst.c,38
+t_list	*lst_cpy_lst(lst_cpy_lst3,26
+
+data-structures/linked-lists/lst_attach_start.c,51
+t_list		*lst_attach_start(lst_attach_start21,664
+
+data-structures/linked-lists/wowie_lists.c,933
+t_list		*lst_new_link(lst_new_link23,675
+t_list		*lst_find_end(lst_find_end81,1823
+t_list		*lst_find_prev(lst_find_prev114,2604
+t_list		*lst_attach_end(lst_attach_end149,3476
+t_list		*lst_attach_start(lst_attach_start181,4368
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref209,5301
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref251,6439
+t_list		*lst_delete_link(lst_delete_link295,7724
+t_list		*lst_delete_lst(lst_delete_lst339,8934
+t_list		*lst_insert_link_prev(lst_insert_link_prev364,9331
+t_list		*lst_insert_link_next(lst_insert_link_next373,9539
+t_list		*lst_map(lst_map384,9773
+t_list	*lst_cpy_link(lst_cpy_link408,10138
+t_list	*lst_cpy_lst(lst_cpy_lst415,10253
+static void	__lst_mapr_inplace_internal(432,10629
+t_list		*lst_mapr_inplace(lst_mapr_inplace439,10808
+t_list		*lst_mapr_cpy(lst_mapr_cpy447,10973
+void		*lst_fold(lst_fold456,11158
+size_t		lst_len(492,11826
+
+data-structures/linked-lists/list_test.c,303
+t_list	*__test_new_link_creation(__test_new_link_creation6,87
+bool	f(14,307
+t_list	*__test_attach_end(__test_attach_end19,355
+t_list	*__test_attach_start(__test_attach_start33,830
+void	__test_list_deletion(47,1320
+void	lst_print(52,1399
+void	__test_new_link_deletion(61,1512
+int	main(71,1718
+
+data-structures/linked-lists/lst_new_link.c,43
+t_list		*lst_new_link(lst_new_link22,663
+
+data-structures/dynarray/wowie-dynarray.h,653
+# define _WOWIE_DYNARRAY_H_2,27
+# define DYNARRAY_L1_DEFAULT_SIZE 9,164
+# define DYNARRAY_L2_DEFAULT_SIZE 10,202
+enum	dynarray_errors 12,241
+	__E_DYNARRAY_MAX_ERR13,264
+enum	dynarray_layers 16,290
+	E_DYNARRAY_L1,17,313
+	E_DYNARRAY_L2,18,329
+enum	DYNARRAY_ERRORS 21,349
+	E_FAILED_ALLOC,22,372
+}	DYNARRAY_ERRORS;23,389
+typedef struct	s_dynarray 25,409
+	uint64_t	size;26,437
+	uint8_t		**data;data27,453
+	uint64_t	l1_used;28,471
+	uint64_t	*l2_used;l2_used29,490
+	uint64_t	layer_expands[layer_expands30,510
+	uint64_t	layer_shrinks[layer_shrinks31,538
+}		t_dynarray;32,598
+# define MODULE_ERR_ARRAY 36,704
+# define DYNARRAYERR(37,758
+
+data-structures/dynarray/dynarray_test.c,130
+#define UNUSED 2,30
+void		bs_display(5,90
+bool		bs_cmp(11,180
+bool		eq_str_cmp(22,390
+int		eq_memcmp(28,503
+int	main(37,627
+
+data-structures/dynarray/wowie-dynarray.c,461
+t_dynarray	*dynarray_init(dynarray_init6,116
+void		dynarray_push(33,1164
+void		dynarray_grow_l1(41,1440
+void		dynarray_grow_l2(59,2095
+void		dynarray_push_l2(70,2559
+void		dynarray_delitem(77,2772
+void		dynarray_clean(88,3000
+void		dynarray_destroy(92,3116
+void		dynarray_sort(99,3266
+int		dynarray_search_brute(111,3591
+void		dynarray_map(119,3819
+void		dynarray_dump(124,3974
+bool		dynarray_is_sorted(128,4090
+int	dynarray_bin_cmp_str(135,4305
+
+types/u8stou16.c,24
+uint16_t	u8stou16(3,21
+
+types/u16stou32.c,25
+uint32_t	u16stou32(3,21
+
+types/u8stou64.c,24
+uint16_t	u8stou64(3,21
+
+types/u8stou32.c,24
+uint32_t	u8stou32(3,21
+
+libwowie.h,27
+# define _LIBWOWIE_H_2,21
+
+BSVL/math_utils.c,117
+float	min(3,19
+float 	max(10,99
+float	sqr(17,180
+float 	clamp(22,221
+float	lerp(27,309
+float	deg_to_rad(32,379
+
+BSVL/vec4.c,248
+void	get_vec4_identity_matrix(3,19
+void	get_view_matrix(10,236
+void	get_arbitrary_rot_mat(25,650
+void	get_translation_matrix(38,1268
+void	get_and_apply_translation_matrix(46,1512
+t_vec4f vec4f_mul_vec(56,1751
+t_vec4f	vec4f_mul_mat4f(67,1910
+
+BSVL/vec3.c,1058
+void	vec3f_copy(5,89
+void	vec3f_set(12,213
+t_vec3f vec3f_add_vec(19,324
+t_vec3f vec3f_add_k(29,463
+t_vec3f vec3f_sub_vec(39,593
+t_vec3f vec3f_sub_k(49,732
+t_vec3f vec3f_div_k(59,861
+t_vec3f vec3f_div_vec(68,989
+t_vec3f vec3f_mod_vec(78,1128
+t_vec3f vec3f_mod_k(88,1285
+t_vec3f vec3f_mul_vec(98,1432
+t_vec3f vec3f_mul_k(108,1571
+float	vec3f_dotprod(118,1700
+t_vec3f	vec3f_crossprod(130,1919
+t_vec3f vec3f_normalize(140,2115
+float	vec3f_dist_origin(152,2306
+float	vec3f_dist_ab(164,2480
+t_vec3f vec3f_apply_fn_int(176,2729
+t_vec3f vec3f_apply_fn_float(186,2873
+t_vec3f vec3f_max(196,3023
+t_vec3f vec3f_min(206,3186
+t_vec3f vec3f_mul_mat3(216,3349
+t_vec3f	vec3f_mul_mat4f(230,3742
+void	get_vec3_identity_matrix(238,3931
+void	get_roll_matrix(245,4071
+void	get_pitch_matrix(252,4259
+void	get_yaw_matrix(259,4450
+void	get_rotation_matrix(266,4639
+void	apply_rotation_matrix(276,4873
+void	get_and_apply_rotation_matrix(280,4980
+bool	vec3f_cmp(287,5226
+t_vec3f vec3_lerp(298,5453
+t_vec3f		refract(307,5626
+t_vec3f		reflect(314,5843
+
+BSVL/vec2.c,447
+void	vec2f_copy(3,19
+void	vec2f_set(9,118
+t_vec2f vec2f_add(15,206
+t_vec2f vec2f_sub(24,322
+t_vec2f vec2f_div_k(33,437
+t_vec2f vec2f_div_vec(42,548
+t_vec2f vec2f_mul_vec(51,667
+t_vec2f	vec2f_mul_mat2f(60,786
+t_vec2f vec2f_mul_k(74,1070
+float	vec2f_dotprod(83,1181
+float	vec2f_dist_origin(94,1370
+t_vec2f vec2f_normalize(103,1506
+float	vec2f_dist_ab(112,1656
+t_vec2f vec2f_apply_fn_float(121,1842
+t_vec2f vec2f_apply_fn_int(129,1973
+
+BSVL/BSVL.h,808
+# define BSVL_H2,15
+typedef struct		s_vec2f8,115
+	float		x;10,141
+	float		y;11,152
+}			t_vec2f;12,163
+typedef struct		s_vec3f14,177
+	float		x;16,203
+	float		y;17,214
+	float		z;18,225
+}			t_vec3f;19,236
+typedef struct		s_vec4f21,250
+	float		x;23,276
+	float		y;24,287
+	float		z;25,298
+	float		w;26,309
+}			t_vec4f;27,320
+typedef t_vec3f		t_mat3[t_mat329,334
+typedef t_vec4f		t_mat4[t_mat430,362
+typedef struct		s_tri32,391
+	t_vec3f		a;34,415
+	t_vec3f		b;35,428
+	t_vec3f		c;36,441
+}			t_tri;37,454
+typedef struct		s_ray39,466
+	t_vec3f		origin;41,490
+	t_vec3f		direction;42,508
+}			t_ray;43,529
+typedef struct		s_cam45,541
+	t_ray		posdata;47,565
+	float		fov;48,582
+	t_vec3f		focus;49,595
+}			t_cam;50,612
+enum			axis52,624
+	X,54,638
+	Y,55,642
+	Z,56,646
+	__AXIS_TOTAL57,650
+
+utils/utils.h,46
+#define _UTILS_H_2,18
+# define USAGE(12,383
+
+utils/usage.c,17
+void	usage(4,35
+
+utils/monitoring.c,63
+void segfault_sigaction(5,65
+void	libwowie_safety_net(22,466
+
+utils/parse_flags.c,58
+#define __ARGUMENTS_MAX 5,85
+uint8_t		parse_flags(7,112
+
+search/search.c,47
+int		search_bin(1,0
+int		search_brute(22,410
+
+search/search.h,24
+#define _SEARCH_H_2,19
+
+error/error.h,23
+#define _ERROR_H_2,18
+
+error/error.c,17
+void	error(3,20
+
+mem/memcpy.c,37
+void	*wowie_memcpy(wowie_memcpy1,0
+
+mem/mem_test.c,63
+#define MOD_TEST_MSG 1,0
+#define UNUSED 2,52
+int main(9,169
+
+mem/memdup.c,38
+void	*wowie_memdup(wowie_memdup3,21
+
+mem/memcmp.c,23
+int	wowie_memcmp(3,21
+
+mem/memalloc.c,42
+void	*wowie_memalloc(wowie_memalloc4,38
+
+mem/memccpy.c,28
+void	*memccpy(memccpy3,21
+
+mem/memmove.c,40
+void *wowie_memmove(wowie_memmove3,18
+
+mem/bzero.c,23
+void	wowie_bzero(3,18
+
+mem/memset.c,37
+void	*wowie_memset(wowie_memset1,0
+
+mem/memchr.c,37
+void	*wowie_memchr(wowie_memchr1,0
+
+mem/mem.h,22
+# define _MEM_H_2,16
+
+buffers/buff_init.c,59
+# define BUFFSIZE 2,32
+uint8_t	*buff_init(buff_init4,55
+
+buffers/buffer_functions.c,144
+#define BUFFSIZE 14,912
+bool	buff_flush(16,934
+size_t	buff_get_remainder(25,1077
+bool	buff_write(35,1253
+char	*buff_init(buff_init57,1738
+
+buffers/buff_flush.c,22
+bool	buff_flush(4,46
+
+buffers/buff_write.c,24
+bool	buff_write(16,935
+
+buffers/buff_get_remainder.c,34
+size_t	buff_get_remainder(16,935
+
+buffers/buff_get_input.c,26
+void	buff_get_input(4,44
+
+buffers/buff_clear.c,22
+void	buff_clear(3,24
+
+buffers/buffers.h,49
+# define BUFFERS_H2,18
+# define BUFFSIZE 6,117
+
+strings/atoi.c,16
+int		atoi(3,22
+
+strings/strnext.c,28
+char	*strnext(strnext4,46
+
+strings/itoa.c,23
+char		*itoa(itoa3,22
+
+strings/strchr.c,26
+char	*strchr(strchr3,24
+
+strings/strcspn.c,21
+size_t	strcspn(4,25
+
+strings/putnbr.c,18
+void	putnbr(3,22
+
+strings/strstr.c,26
+char	*strstr(strstr4,48
+
+strings/intlen.c,16
+int	intlen(1,0
+
+strings/get_next_line.c,71
+void		augment_size(5,66
+int			get(22,481
+int			get_next_line(44,812
+
+strings/strlen.c,21
+size_t		strlen(3,24
+
+strings/strings.h,55
+# define _STRINGS_H_2,20
+# define GNL_BUFF_SIZE 3,41
+
+strings/strdup.c,26
+char	*strdup(strdup3,22
+
+strings/strclean.c,30
+char	*strclean(strclean3,24
+
+strings/putchar.c,19
+void	putchar(3,21
+
+strings/putstr.c,18
+void	putstr(4,44
+
+strings/strcmp.c,17
+int	strcmp(3,24
+
+strings/strncpy.c,20
+void	_strncpy(3,24
+
+strings/str_bin_search.c,25
+int	str_search_bin(3,33
+
+data-structures/stacks/wowie_lstacks.h,200
+#define _WOWIE_LSTACKS_H_2,26
+struct  s_lstack 6,116
+	t_list	*head;head7,135
+	t_list	*top;top8,150
+	size_t	top_pos;9,164
+	size_t	size;10,181
+typedef struct s_lstack *t_lstack;t_lstack13,199
+
+data-structures/stacks/stack_error.c,64
+const	char *__g_error_stk_messages[__g_error_stk_messages3,29
+
+data-structures/stacks/wowie_stacks.h,512
+#define _WOWIE_STACKS_H_2,25
+# define STACK_DEFAULT_SIZE 13,215
+struct	s_stack 18,284
+	void		**data;data19,301
+	int		top;20,316
+	size_t		max_entries;21,327
+	size_t		*entry_sizes;entry_sizes22,349
+	size_t		__debug_mem_usage;23,372
+enum	stack_err 27,412
+	E_STACK_FULL,28,429
+	E_STACK_EMPTY,29,444
+	E_STACK_OK,30,460
+	E_STACK_ALLOC_FAILED,31,473
+	E_STACK_ABNORMAL,32,496
+	__E_STK_MAX_ERR,33,515
+# define STK_ERR_ARRAY 37,597
+# define STKERR(38,643
+typedef struct s_stack	*t_stack;t_stack40,733
+
+data-structures/stacks/lstack_test.c,141
+#define UNUSED 4,69
+typedef struct	s_vec3{s_vec37,129
+	float x;8,152
+	float y;9,162
+	float z;10,172
+}		t_vec3;11,182
+int	main(13,226
+
+data-structures/stacks/stack_test.c,140
+#define UNUSED 3,47
+typedef struct	s_vec3{s_vec36,107
+	float x;7,130
+	float y;8,140
+	float z;9,150
+}		t_vec3;10,160
+int	main(12,204
+
+data-structures/stacks/wowie_stacks.c,421
+struct	s_stack 6,87
+	void		**data;data7,104
+	int		top;8,119
+	size_t		max_entries;9,130
+	size_t		*entry_sizes;entry_sizes10,152
+	size_t		__debug_mem_usage;11,175
+t_stack	stack_new(15,215
+void	stack_push(48,902
+void	*stack_pop(stack_pop71,1495
+void	*stack_peek(stack_peek91,1919
+bool	stack_empty(95,1990
+bool	stack_full(99,2054
+int	stack_top(103,2141
+int	stack_check(107,2195
+void	stack_cleanup(123,2475
+
+data-structures/stacks/wowie_lstacks.c,192
+t_lstack lstack_new(12,160
+void	lstack_push(26,438
+void	*lstack_pop(lstack_pop34,657
+bool	lstack_empty(43,952
+void	*lst_stack_peek(lst_stack_peek47,1010
+void	lst_stack_cleanup(51,1072
+
+data-structures/trees/tree_map.c,86
+void	tree_map_inorder(4,46
+void	tree_map_preorder(12,181
+void	tree_map_post(20,319
+
+data-structures/trees/tree_insert.c,23
+void	tree_insert(3,25
+
+data-structures/trees/tree_search.c,38
+t_tree	*tree_search(tree_search5,74
+
+data-structures/trees/tree_new.c,32
+t_tree	*tree_new(tree_new3,25
+
+data-structures/trees/wowie-tree-errors.c,66
+const char *__g_error_tree_messages[__g_error_tree_messages3,27
+
+data-structures/trees/tree_test.c,15
+int	main(6,86
+
+data-structures/trees/wowie_tree.h,307
+# define _TREE_H_2,17
+typedef struct	s_tree 6,85
+	struct	s_tree *l;l7,109
+	struct	s_tree *r;r8,128
+	void	*data;data9,147
+	size_t	size;10,160
+}		t_tree;11,174
+enum	tree_errors 13,186
+	E_TREE_ATTEMPTED_NULL,14,205
+	__E_TREE_MAX_ERR,15,229
+# define TREE_ERR_ARRAY 21,335
+# define TREEERR(22,383
+
+data-structures/trees/tree_delete.c,70
+void	node_clear(4,46
+void	tree_print(13,175
+void	tree_clear(19,284
+
+data-structures/data_structures.h,33
+#define _DATA_STRUCTURES_H_2,28
+
+data-structures/heaps/heaps.h,205
+# define _HEAPS_H_2,18
+#	define HEAP_TYPE 10,170
+# define HEAP_MAX 13,205
+typedef	struct	s_heap 15,228
+	HEAP_TYPE	*data;data16,252
+	int		size_max;17,270
+	int		size_current;18,286
+}		t_heap;19,306
+
+data-structures/heaps/wowie-heaps.c,489
+t_heap		*heap_create(heap_create3,20
+void	        heap_destroy(15,280
+void		heap_clear(20,356
+void		heap_double(25,466
+static void	heap_swap(36,734
+static void	heap_key_pushup(45,943
+static void	heap_key_pushdown(53,1121
+t_heap		*heap_heapify(heap_heapify66,1382
+void		heap_key_ins(76,1635
+int		heap_get_index_p(84,1852
+int		heap_get_index_l(88,1908
+int		heap_get_index_r(92,1964
+bool		heap_empty_p(96,2020
+HEAP_TYPE       heap_get_min(100,2107
+int		heap_min_del(104,2207
+
+data-structures/linked-lists/lst_search_brute_with_ref.c,69
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref22,769
+
+data-structures/linked-lists/lst_delete_lst.c,47
+t_list		*lst_delete_lst(lst_delete_lst21,716
+
+data-structures/linked-lists/lst_map.c,173
+t_list		*lst_map(lst_map3,26
+static void	__lst_mapr_inplace_internal(26,390
+t_list		*lst_mapr_inplace(lst_mapr_inplace33,569
+t_list		*lst_mapr_cpy(lst_mapr_cpy41,734
+
+data-structures/linked-lists/lst_find_prev.c,45
+t_list		*lst_find_prev(lst_find_prev21,593
+
+data-structures/linked-lists/lst_fold.c,31
+void		*lst_fold(lst_fold3,26
+
+data-structures/linked-lists/lst_insert_link_next.c,57
+t_list		*lst_insert_link_next(lst_insert_link_next3,26
+
+data-structures/linked-lists/lst_attach_end.c,47
+t_list		*lst_attach_end(lst_attach_end22,626
+
+data-structures/linked-lists/lst_search_brute_no_ref.c,65
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref21,666
+
+data-structures/linked-lists/wowie_lists.h,775
+# define _WOWIE_LISTS_H_2,24
+enum	lst_errors 10,151
+	E_NOERROR,11,169
+	E_LST_ATTACH_ATTEMPTED_NULL,12,181
+	E_LST_SEARCH_ATTEMPTED_NULL_HEAD,13,211
+	E_LST_SEARCH_ATTEMPTED_NULL_TAIL,14,246
+	E_LST_SEARCH_ATTEMPTED_NULL_FN,15,281
+	E_LST_FIND_NO_LIST,16,314
+	E_LST_MAP_ATTEMPTED_NULL,17,335
+	E_LST_MAP_ATTEMPTED_NULL_FN,18,362
+	E_LST_FOLD_ATTEMPTED_NULL_FN,19,392
+	E_LST_FOLD_ATTEMPTED_NULL_HEAD,20,423
+	E_LST_FOLD_TOO_SMALL,21,456
+	E_LST_DEL_ATTEMPTED_NULL,22,479
+	__E_LST_MAX_ERR,23,506
+	E_ALLOC_ATTEMPTED_0_SIZE,24,524
+	E_ALLOC_ATTEMPTED_NULL,25,551
+	E_ALLOC_FAILED,26,576
+typedef struct	s_list 29,597
+	void		*data;data30,621
+	size_t		size;31,635
+	struct	s_list	*next;next32,650
+}		t_list;33,672
+# define LST_ERR_ARRAY 37,764
+# define LSTERR(38,810
+
+data-structures/linked-lists/lst_delete_link.c,49
+t_list		*lst_delete_link(lst_delete_link24,892
+
+data-structures/linked-lists/wowie_lst_error.c,64
+const char *__g_error_lst_messages[__g_error_lst_messages3,28
+
+data-structures/linked-lists/lst_len.c,22
+size_t		lst_len(3,26
+
+data-structures/linked-lists/lst_insert_link_prev.c,57
+t_list		*lst_insert_link_prev(lst_insert_link_prev3,26
+
+data-structures/linked-lists/lst_find_end.c,43
+t_list		*lst_find_end(lst_find_end19,580
+
+data-structures/linked-lists/lst_cpy_link.c,40
+t_list	*lst_cpy_link(lst_cpy_link3,26
+
+data-structures/linked-lists/lst_clear.c,37
+t_list		*lst_clear(lst_clear20,676
+
+data-structures/linked-lists/lst_cpy_lst.c,38
+t_list	*lst_cpy_lst(lst_cpy_lst3,26
+
+data-structures/linked-lists/lst_attach_start.c,51
+t_list		*lst_attach_start(lst_attach_start21,664
+
+data-structures/linked-lists/wowie_lists.c,933
+t_list		*lst_new_link(lst_new_link23,675
+t_list		*lst_find_end(lst_find_end81,1823
+t_list		*lst_find_prev(lst_find_prev114,2604
+t_list		*lst_attach_end(lst_attach_end149,3476
+t_list		*lst_attach_start(lst_attach_start181,4368
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref209,5301
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref251,6439
+t_list		*lst_delete_link(lst_delete_link295,7724
+t_list		*lst_delete_lst(lst_delete_lst339,8934
+t_list		*lst_insert_link_prev(lst_insert_link_prev364,9331
+t_list		*lst_insert_link_next(lst_insert_link_next373,9539
+t_list		*lst_map(lst_map384,9773
+t_list	*lst_cpy_link(lst_cpy_link408,10138
+t_list	*lst_cpy_lst(lst_cpy_lst415,10253
+static void	__lst_mapr_inplace_internal(432,10629
+t_list		*lst_mapr_inplace(lst_mapr_inplace439,10808
+t_list		*lst_mapr_cpy(lst_mapr_cpy447,10973
+void		*lst_fold(lst_fold456,11158
+size_t		lst_len(492,11826
+
+data-structures/linked-lists/list_test.c,303
+t_list	*__test_new_link_creation(__test_new_link_creation6,87
+bool	f(14,307
+t_list	*__test_attach_end(__test_attach_end19,355
+t_list	*__test_attach_start(__test_attach_start33,830
+void	__test_list_deletion(47,1320
+void	lst_print(52,1399
+void	__test_new_link_deletion(61,1512
+int	main(71,1718
+
+data-structures/linked-lists/lst_new_link.c,43
+t_list		*lst_new_link(lst_new_link22,663
+
+data-structures/dynarray/wowie-dynarray.h,653
+# define _WOWIE_DYNARRAY_H_2,27
+# define DYNARRAY_L1_DEFAULT_SIZE 9,164
+# define DYNARRAY_L2_DEFAULT_SIZE 10,202
+enum	dynarray_errors 12,241
+	__E_DYNARRAY_MAX_ERR13,264
+enum	dynarray_layers 16,290
+	E_DYNARRAY_L1,17,313
+	E_DYNARRAY_L2,18,329
+enum	DYNARRAY_ERRORS 21,349
+	E_FAILED_ALLOC,22,372
+}	DYNARRAY_ERRORS;23,389
+typedef struct	s_dynarray 25,409
+	uint64_t	size;26,437
+	uint8_t		**data;data27,453
+	uint64_t	l1_used;28,471
+	uint64_t	*l2_used;l2_used29,490
+	uint64_t	layer_expands[layer_expands30,510
+	uint64_t	layer_shrinks[layer_shrinks31,538
+}		t_dynarray;32,598
+# define MODULE_ERR_ARRAY 36,704
+# define DYNARRAYERR(37,758
+
+data-structures/dynarray/dynarray_test.c,130
+#define UNUSED 2,30
+void		bs_display(5,90
+bool		bs_cmp(11,180
+bool		eq_str_cmp(22,390
+int		eq_memcmp(28,503
+int	main(37,627
+
+data-structures/dynarray/wowie-dynarray.c,461
+t_dynarray	*dynarray_init(dynarray_init6,116
+void		dynarray_push(33,1164
+void		dynarray_grow_l1(41,1440
+void		dynarray_grow_l2(59,2095
+void		dynarray_push_l2(70,2559
+void		dynarray_delitem(77,2772
+void		dynarray_clean(88,3000
+void		dynarray_destroy(92,3116
+void		dynarray_sort(99,3266
+int		dynarray_search_brute(111,3591
+void		dynarray_map(119,3819
+void		dynarray_dump(124,3974
+bool		dynarray_is_sorted(128,4090
+int	dynarray_bin_cmp_str(135,4305
+
+types/u8stou16.c,24
+uint16_t	u8stou16(3,21
+
+types/u16stou32.c,25
+uint32_t	u16stou32(3,21
+
+types/u8stou32.c,24
+uint32_t	u8stou32(3,21
+
+libwowie.h,27
+# define _LIBWOWIE_H_2,21
+
+BSVL/math_utils.c,117
+float	min(3,19
+float 	max(10,99
+float	sqr(17,180
+float 	clamp(22,221
+float	lerp(27,309
+float	deg_to_rad(32,379
+
+BSVL/vec4.c,248
+void	get_vec4_identity_matrix(3,19
+void	get_view_matrix(10,236
+void	get_arbitrary_rot_mat(25,650
+void	get_translation_matrix(38,1268
+void	get_and_apply_translation_matrix(46,1512
+t_vec4f vec4f_mul_vec(56,1751
+t_vec4f	vec4f_mul_mat4f(67,1910
+
+BSVL/vec3.c,1058
+void	vec3f_copy(5,89
+void	vec3f_set(12,213
+t_vec3f vec3f_add_vec(19,324
+t_vec3f vec3f_add_k(29,463
+t_vec3f vec3f_sub_vec(39,593
+t_vec3f vec3f_sub_k(49,732
+t_vec3f vec3f_div_k(59,861
+t_vec3f vec3f_div_vec(68,989
+t_vec3f vec3f_mod_vec(78,1128
+t_vec3f vec3f_mod_k(88,1285
+t_vec3f vec3f_mul_vec(98,1432
+t_vec3f vec3f_mul_k(108,1571
+float	vec3f_dotprod(118,1700
+t_vec3f	vec3f_crossprod(130,1919
+t_vec3f vec3f_normalize(140,2115
+float	vec3f_dist_origin(152,2306
+float	vec3f_dist_ab(164,2480
+t_vec3f vec3f_apply_fn_int(176,2729
+t_vec3f vec3f_apply_fn_float(186,2873
+t_vec3f vec3f_max(196,3023
+t_vec3f vec3f_min(206,3186
+t_vec3f vec3f_mul_mat3(216,3349
+t_vec3f	vec3f_mul_mat4f(230,3742
+void	get_vec3_identity_matrix(238,3931
+void	get_roll_matrix(245,4071
+void	get_pitch_matrix(252,4259
+void	get_yaw_matrix(259,4450
+void	get_rotation_matrix(266,4639
+void	apply_rotation_matrix(276,4873
+void	get_and_apply_rotation_matrix(280,4980
+bool	vec3f_cmp(287,5226
+t_vec3f vec3_lerp(298,5453
+t_vec3f		refract(307,5626
+t_vec3f		reflect(314,5843
+
+BSVL/vec2.c,447
+void	vec2f_copy(3,19
+void	vec2f_set(9,118
+t_vec2f vec2f_add(15,206
+t_vec2f vec2f_sub(24,322
+t_vec2f vec2f_div_k(33,437
+t_vec2f vec2f_div_vec(42,548
+t_vec2f vec2f_mul_vec(51,667
+t_vec2f	vec2f_mul_mat2f(60,786
+t_vec2f vec2f_mul_k(74,1070
+float	vec2f_dotprod(83,1181
+float	vec2f_dist_origin(94,1370
+t_vec2f vec2f_normalize(103,1506
+float	vec2f_dist_ab(112,1656
+t_vec2f vec2f_apply_fn_float(121,1842
+t_vec2f vec2f_apply_fn_int(129,1973
+
+BSVL/BSVL.h,808
+# define BSVL_H2,15
+typedef struct		s_vec2f8,115
+	float		x;10,141
+	float		y;11,152
+}			t_vec2f;12,163
+typedef struct		s_vec3f14,177
+	float		x;16,203
+	float		y;17,214
+	float		z;18,225
+}			t_vec3f;19,236
+typedef struct		s_vec4f21,250
+	float		x;23,276
+	float		y;24,287
+	float		z;25,298
+	float		w;26,309
+}			t_vec4f;27,320
+typedef t_vec3f		t_mat3[t_mat329,334
+typedef t_vec4f		t_mat4[t_mat430,362
+typedef struct		s_tri32,391
+	t_vec3f		a;34,415
+	t_vec3f		b;35,428
+	t_vec3f		c;36,441
+}			t_tri;37,454
+typedef struct		s_ray39,466
+	t_vec3f		origin;41,490
+	t_vec3f		direction;42,508
+}			t_ray;43,529
+typedef struct		s_cam45,541
+	t_ray		posdata;47,565
+	float		fov;48,582
+	t_vec3f		focus;49,595
+}			t_cam;50,612
+enum			axis52,624
+	X,54,638
+	Y,55,642
+	Z,56,646
+	__AXIS_TOTAL57,650
+
+utils/utils.h,46
+#define _UTILS_H_2,18
+# define USAGE(12,383
+
+utils/usage.c,17
+void	usage(4,35
+
+utils/monitoring.c,63
+void segfault_sigaction(5,65
+void	libwowie_safety_net(22,466
+
+utils/parse_flags.c,58
+#define __ARGUMENTS_MAX 5,85
+uint8_t		parse_flags(7,112
+
+search/search.c,47
+int		search_bin(1,0
+int		search_brute(22,410
+
+search/search.h,24
+#define _SEARCH_H_2,19
+
+templates/generic-header.h,31
+#define BULLSHIT_SRC_H_23,718
+
+error/error.h,23
+#define _ERROR_H_2,18
+
+error/error.c,17
+void	error(3,20
+
+mem/memcpy.c,37
+void	*wowie_memcpy(wowie_memcpy1,0
+
+mem/mem_test.c,63
+#define MOD_TEST_MSG 1,0
+#define UNUSED 2,52
+int main(9,169
+
+mem/memdup.c,38
+void	*wowie_memdup(wowie_memdup3,21
+
+mem/memcmp.c,23
+int	wowie_memcmp(3,21
+
+mem/memalloc.c,42
+void	*wowie_memalloc(wowie_memalloc4,38
+
+mem/memccpy.c,28
+void	*memccpy(memccpy3,21
+
+mem/memmove.c,40
+void *wowie_memmove(wowie_memmove3,18
+
+mem/bzero.c,23
+void	wowie_bzero(3,18
+
+mem/memset.c,37
+void	*wowie_memset(wowie_memset1,0
+
+mem/memchr.c,37
+void	*wowie_memchr(wowie_memchr1,0
+
+mem/mem.h,22
+# define _MEM_H_2,16
+
+templates/generic-source.c,0
+
+utils/kek.c,0
+
+buffers/buff_init.c,59
+# define BUFFSIZE 2,32
+uint8_t	*buff_init(buff_init4,55
+
+buffers/buffer_functions.c,144
+#define BUFFSIZE 14,912
+bool	buff_flush(16,934
+size_t	buff_get_remainder(25,1077
+bool	buff_write(35,1253
+char	*buff_init(buff_init57,1738
+
+buffers/buff_flush.c,22
+bool	buff_flush(4,46
+
+buffers/buff_write.c,24
+bool	buff_write(16,935
+
+buffers/buff_get_remainder.c,34
+size_t	buff_get_remainder(16,935
+
+buffers/buff_get_input.c,26
+void	buff_get_input(4,44
+
+buffers/buff_clear.c,22
+void	buff_clear(3,24
+
+buffers/buffers.h,49
+# define BUFFERS_H2,18
+# define BUFFSIZE 6,117
+
+strings/atoi.c,16
+int		atoi(3,22
+
+strings/strnext.c,28
+char	*strnext(strnext4,46
+
+strings/itoa.c,23
+char		*itoa(itoa3,22
+
+strings/strchr.c,26
+char	*strchr(strchr3,24
+
+strings/strcspn.c,21
+size_t	strcspn(4,25
+
+strings/putnbr.c,18
+void	putnbr(3,22
+
+strings/strstr.c,26
+char	*strstr(strstr4,48
+
+strings/intlen.c,16
+int	intlen(1,0
+
+strings/get_next_line.c,71
+void		augment_size(5,66
+int			get(22,481
+int			get_next_line(44,812
+
+strings/strlen.c,21
+size_t		strlen(3,24
+
+strings/strings.h,55
+# define _STRINGS_H_2,20
+# define GNL_BUFF_SIZE 3,41
+
+strings/strdup.c,26
+char	*strdup(strdup3,22
+
+strings/strclean.c,30
+char	*strclean(strclean3,24
+
+strings/putchar.c,19
+void	putchar(3,21
+
+strings/putstr.c,18
+void	putstr(4,44
+
+strings/strcmp.c,17
+int	strcmp(3,24
+
+strings/strncpy.c,20
+void	_strncpy(3,24
+
+strings/str_bin_search.c,25
+int	str_search_bin(3,33
+
+data-structures/stacks/wowie_lstacks.h,200
+#define _WOWIE_LSTACKS_H_2,26
+struct  s_lstack 6,116
+	t_list	*head;head7,135
+	t_list	*top;top8,150
+	size_t	top_pos;9,164
+	size_t	size;10,181
+typedef struct s_lstack *t_lstack;t_lstack13,199
+
+data-structures/stacks/stack_error.c,64
+const	char *__g_error_stk_messages[__g_error_stk_messages3,29
+
+data-structures/stacks/wowie_stacks.h,512
+#define _WOWIE_STACKS_H_2,25
+# define STACK_DEFAULT_SIZE 13,215
+struct	s_stack 18,284
+	void		**data;data19,301
+	int		top;20,316
+	size_t		max_entries;21,327
+	size_t		*entry_sizes;entry_sizes22,349
+	size_t		__debug_mem_usage;23,372
+enum	stack_err 27,412
+	E_STACK_FULL,28,429
+	E_STACK_EMPTY,29,444
+	E_STACK_OK,30,460
+	E_STACK_ALLOC_FAILED,31,473
+	E_STACK_ABNORMAL,32,496
+	__E_STK_MAX_ERR,33,515
+# define STK_ERR_ARRAY 37,597
+# define STKERR(38,643
+typedef struct s_stack	*t_stack;t_stack40,733
+
+data-structures/stacks/lstack_test.c,141
+#define UNUSED 4,69
+typedef struct	s_vec3{s_vec37,129
+	float x;8,152
+	float y;9,162
+	float z;10,172
+}		t_vec3;11,182
+int	main(13,226
+
+data-structures/stacks/stack_test.c,140
+#define UNUSED 3,47
+typedef struct	s_vec3{s_vec36,107
+	float x;7,130
+	float y;8,140
+	float z;9,150
+}		t_vec3;10,160
+int	main(12,204
+
+data-structures/stacks/wowie_stacks.c,421
+struct	s_stack 6,87
+	void		**data;data7,104
+	int		top;8,119
+	size_t		max_entries;9,130
+	size_t		*entry_sizes;entry_sizes10,152
+	size_t		__debug_mem_usage;11,175
+t_stack	stack_new(15,215
+void	stack_push(48,902
+void	*stack_pop(stack_pop71,1495
+void	*stack_peek(stack_peek91,1919
+bool	stack_empty(95,1990
+bool	stack_full(99,2054
+int	stack_top(103,2141
+int	stack_check(107,2195
+void	stack_cleanup(123,2475
+
+data-structures/stacks/wowie_lstacks.c,192
+t_lstack lstack_new(12,160
+void	lstack_push(26,438
+void	*lstack_pop(lstack_pop34,657
+bool	lstack_empty(43,952
+void	*lst_stack_peek(lst_stack_peek47,1010
+void	lst_stack_cleanup(51,1072
+
+data-structures/trees/tree_map.c,86
+void	tree_map_inorder(4,46
+void	tree_map_preorder(12,181
+void	tree_map_post(20,319
+
+data-structures/trees/tree_insert.c,23
+void	tree_insert(3,25
+
+data-structures/trees/tree_search.c,38
+t_tree	*tree_search(tree_search5,74
+
+data-structures/trees/tree_new.c,32
+t_tree	*tree_new(tree_new3,25
+
+data-structures/trees/wowie-tree-errors.c,66
+const char *__g_error_tree_messages[__g_error_tree_messages3,27
+
+data-structures/trees/tree_test.c,15
+int	main(6,86
+
+data-structures/trees/wowie_tree.h,307
+# define _TREE_H_2,17
+typedef struct	s_tree 6,85
+	struct	s_tree *l;l7,109
+	struct	s_tree *r;r8,128
+	void	*data;data9,147
+	size_t	size;10,160
+}		t_tree;11,174
+enum	tree_errors 13,186
+	E_TREE_ATTEMPTED_NULL,14,205
+	__E_TREE_MAX_ERR,15,229
+# define TREE_ERR_ARRAY 21,335
+# define TREEERR(22,383
+
+data-structures/trees/tree_delete.c,70
+void	node_clear(4,46
+void	tree_print(13,175
+void	tree_clear(19,284
+
+data-structures/data_structures.h,33
+#define _DATA_STRUCTURES_H_2,28
+
+data-structures/heaps/heaps.h,205
+# define _HEAPS_H_2,18
+#	define HEAP_TYPE 10,170
+# define HEAP_MAX 13,205
+typedef	struct	s_heap 15,228
+	HEAP_TYPE	*data;data16,252
+	int		size_max;17,270
+	int		size_current;18,286
+}		t_heap;19,306
+
+data-structures/heaps/wowie-heaps.c,489
+t_heap		*heap_create(heap_create3,20
+void	        heap_destroy(15,280
+void		heap_clear(20,356
+void		heap_double(25,466
+static void	heap_swap(36,734
+static void	heap_key_pushup(45,943
+static void	heap_key_pushdown(53,1121
+t_heap		*heap_heapify(heap_heapify66,1382
+void		heap_key_ins(76,1635
+int		heap_get_index_p(84,1852
+int		heap_get_index_l(88,1908
+int		heap_get_index_r(92,1964
+bool		heap_empty_p(96,2020
+HEAP_TYPE       heap_get_min(100,2107
+int		heap_min_del(104,2207
+
+data-structures/linked-lists/lst_search_brute_with_ref.c,69
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref22,769
+
+data-structures/linked-lists/lst_delete_lst.c,47
+t_list		*lst_delete_lst(lst_delete_lst21,716
+
+data-structures/linked-lists/lst_map.c,173
+t_list		*lst_map(lst_map3,26
+static void	__lst_mapr_inplace_internal(26,390
+t_list		*lst_mapr_inplace(lst_mapr_inplace33,569
+t_list		*lst_mapr_cpy(lst_mapr_cpy41,734
+
+data-structures/linked-lists/lst_find_prev.c,45
+t_list		*lst_find_prev(lst_find_prev21,593
+
+data-structures/linked-lists/lst_fold.c,31
+void		*lst_fold(lst_fold3,26
+
+data-structures/linked-lists/lst_insert_link_next.c,57
+t_list		*lst_insert_link_next(lst_insert_link_next3,26
+
+data-structures/linked-lists/lst_attach_end.c,47
+t_list		*lst_attach_end(lst_attach_end22,626
+
+data-structures/linked-lists/lst_search_brute_no_ref.c,65
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref21,666
+
+data-structures/linked-lists/wowie_lists.h,775
+# define _WOWIE_LISTS_H_2,24
+enum	lst_errors 10,151
+	E_NOERROR,11,169
+	E_LST_ATTACH_ATTEMPTED_NULL,12,181
+	E_LST_SEARCH_ATTEMPTED_NULL_HEAD,13,211
+	E_LST_SEARCH_ATTEMPTED_NULL_TAIL,14,246
+	E_LST_SEARCH_ATTEMPTED_NULL_FN,15,281
+	E_LST_FIND_NO_LIST,16,314
+	E_LST_MAP_ATTEMPTED_NULL,17,335
+	E_LST_MAP_ATTEMPTED_NULL_FN,18,362
+	E_LST_FOLD_ATTEMPTED_NULL_FN,19,392
+	E_LST_FOLD_ATTEMPTED_NULL_HEAD,20,423
+	E_LST_FOLD_TOO_SMALL,21,456
+	E_LST_DEL_ATTEMPTED_NULL,22,479
+	__E_LST_MAX_ERR,23,506
+	E_ALLOC_ATTEMPTED_0_SIZE,24,524
+	E_ALLOC_ATTEMPTED_NULL,25,551
+	E_ALLOC_FAILED,26,576
+typedef struct	s_list 29,597
+	void		*data;data30,621
+	size_t		size;31,635
+	struct	s_list	*next;next32,650
+}		t_list;33,672
+# define LST_ERR_ARRAY 37,764
+# define LSTERR(38,810
+
+data-structures/linked-lists/lst_delete_link.c,49
+t_list		*lst_delete_link(lst_delete_link24,892
+
+data-structures/linked-lists/wowie_lst_error.c,64
+const char *__g_error_lst_messages[__g_error_lst_messages3,28
+
+data-structures/linked-lists/lst_len.c,22
+size_t		lst_len(3,26
+
+data-structures/linked-lists/lst_insert_link_prev.c,57
+t_list		*lst_insert_link_prev(lst_insert_link_prev3,26
+
+data-structures/linked-lists/lst_find_end.c,43
+t_list		*lst_find_end(lst_find_end19,580
+
+data-structures/linked-lists/lst_cpy_link.c,40
+t_list	*lst_cpy_link(lst_cpy_link3,26
+
+data-structures/linked-lists/lst_clear.c,37
+t_list		*lst_clear(lst_clear20,676
+
+data-structures/linked-lists/lst_cpy_lst.c,38
+t_list	*lst_cpy_lst(lst_cpy_lst3,26
+
+data-structures/linked-lists/lst_attach_start.c,51
+t_list		*lst_attach_start(lst_attach_start21,664
+
+data-structures/linked-lists/wowie_lists.c,933
+t_list		*lst_new_link(lst_new_link23,675
+t_list		*lst_find_end(lst_find_end81,1823
+t_list		*lst_find_prev(lst_find_prev114,2604
+t_list		*lst_attach_end(lst_attach_end149,3476
+t_list		*lst_attach_start(lst_attach_start181,4368
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref209,5301
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref251,6439
+t_list		*lst_delete_link(lst_delete_link295,7724
+t_list		*lst_delete_lst(lst_delete_lst339,8934
+t_list		*lst_insert_link_prev(lst_insert_link_prev364,9331
+t_list		*lst_insert_link_next(lst_insert_link_next373,9539
+t_list		*lst_map(lst_map384,9773
+t_list	*lst_cpy_link(lst_cpy_link408,10138
+t_list	*lst_cpy_lst(lst_cpy_lst415,10253
+static void	__lst_mapr_inplace_internal(432,10629
+t_list		*lst_mapr_inplace(lst_mapr_inplace439,10808
+t_list		*lst_mapr_cpy(lst_mapr_cpy447,10973
+void		*lst_fold(lst_fold456,11158
+size_t		lst_len(492,11826
+
+data-structures/linked-lists/list_test.c,303
+t_list	*__test_new_link_creation(__test_new_link_creation6,87
+bool	f(14,307
+t_list	*__test_attach_end(__test_attach_end19,355
+t_list	*__test_attach_start(__test_attach_start33,830
+void	__test_list_deletion(47,1320
+void	lst_print(52,1399
+void	__test_new_link_deletion(61,1512
+int	main(71,1718
+
+data-structures/linked-lists/lst_new_link.c,43
+t_list		*lst_new_link(lst_new_link22,663
+
+data-structures/dynarray/wowie-dynarray.h,653
+# define _WOWIE_DYNARRAY_H_2,27
+# define DYNARRAY_L1_DEFAULT_SIZE 9,164
+# define DYNARRAY_L2_DEFAULT_SIZE 10,202
+enum	dynarray_errors 12,241
+	__E_DYNARRAY_MAX_ERR13,264
+enum	dynarray_layers 16,290
+	E_DYNARRAY_L1,17,313
+	E_DYNARRAY_L2,18,329
+enum	DYNARRAY_ERRORS 21,349
+	E_FAILED_ALLOC,22,372
+}	DYNARRAY_ERRORS;23,389
+typedef struct	s_dynarray 25,409
+	uint64_t	size;26,437
+	uint8_t		**data;data27,453
+	uint64_t	l1_used;28,471
+	uint64_t	*l2_used;l2_used29,490
+	uint64_t	layer_expands[layer_expands30,510
+	uint64_t	layer_shrinks[layer_shrinks31,538
+}		t_dynarray;32,598
+# define MODULE_ERR_ARRAY 36,704
+# define DYNARRAYERR(37,758
+
+data-structures/dynarray/dynarray_test.c,130
+#define UNUSED 2,30
+void		bs_display(5,90
+bool		bs_cmp(11,180
+bool		eq_str_cmp(22,390
+int		eq_memcmp(28,503
+int	main(37,627
+
+data-structures/dynarray/wowie-dynarray.c,461
+t_dynarray	*dynarray_init(dynarray_init6,116
+void		dynarray_push(33,1164
+void		dynarray_grow_l1(41,1440
+void		dynarray_grow_l2(59,2095
+void		dynarray_push_l2(70,2559
+void		dynarray_delitem(77,2772
+void		dynarray_clean(88,3000
+void		dynarray_destroy(92,3116
+void		dynarray_sort(99,3266
+int		dynarray_search_brute(111,3591
+void		dynarray_map(119,3819
+void		dynarray_dump(124,3974
+bool		dynarray_is_sorted(128,4090
+int	dynarray_bin_cmp_str(135,4305
+
+types/u8stou16.c,24
+uint16_t	u8stou16(3,21
+
+types/u16stou32.c,25
+uint32_t	u16stou32(3,21
+
+types/u8stou32.c,24
+uint32_t	u8stou32(3,21
+
+libwowie.h,27
+# define _LIBWOWIE_H_2,21
+
+BSVL/math_utils.c,117
+float	min(3,19
+float 	max(10,99
+float	sqr(17,180
+float 	clamp(22,221
+float	lerp(27,309
+float	deg_to_rad(32,379
+
+BSVL/vec4.c,248
+void	get_vec4_identity_matrix(3,19
+void	get_view_matrix(10,236
+void	get_arbitrary_rot_mat(25,650
+void	get_translation_matrix(38,1268
+void	get_and_apply_translation_matrix(46,1512
+t_vec4f vec4f_mul_vec(56,1751
+t_vec4f	vec4f_mul_mat4f(67,1910
+
+BSVL/vec3.c,1058
+void	vec3f_copy(5,89
+void	vec3f_set(12,213
+t_vec3f vec3f_add_vec(19,324
+t_vec3f vec3f_add_k(29,463
+t_vec3f vec3f_sub_vec(39,593
+t_vec3f vec3f_sub_k(49,732
+t_vec3f vec3f_div_k(59,861
+t_vec3f vec3f_div_vec(68,989
+t_vec3f vec3f_mod_vec(78,1128
+t_vec3f vec3f_mod_k(88,1285
+t_vec3f vec3f_mul_vec(98,1432
+t_vec3f vec3f_mul_k(108,1571
+float	vec3f_dotprod(118,1700
+t_vec3f	vec3f_crossprod(130,1919
+t_vec3f vec3f_normalize(140,2115
+float	vec3f_dist_origin(152,2306
+float	vec3f_dist_ab(164,2480
+t_vec3f vec3f_apply_fn_int(176,2729
+t_vec3f vec3f_apply_fn_float(186,2873
+t_vec3f vec3f_max(196,3023
+t_vec3f vec3f_min(206,3186
+t_vec3f vec3f_mul_mat3(216,3349
+t_vec3f	vec3f_mul_mat4f(230,3742
+void	get_vec3_identity_matrix(238,3931
+void	get_roll_matrix(245,4071
+void	get_pitch_matrix(252,4259
+void	get_yaw_matrix(259,4450
+void	get_rotation_matrix(266,4639
+void	apply_rotation_matrix(276,4873
+void	get_and_apply_rotation_matrix(280,4980
+bool	vec3f_cmp(287,5226
+t_vec3f vec3_lerp(298,5453
+t_vec3f		refract(307,5626
+t_vec3f		reflect(314,5843
+
+BSVL/vec2.c,447
+void	vec2f_copy(3,19
+void	vec2f_set(9,118
+t_vec2f vec2f_add(15,206
+t_vec2f vec2f_sub(24,322
+t_vec2f vec2f_div_k(33,437
+t_vec2f vec2f_div_vec(42,548
+t_vec2f vec2f_mul_vec(51,667
+t_vec2f	vec2f_mul_mat2f(60,786
+t_vec2f vec2f_mul_k(74,1070
+float	vec2f_dotprod(83,1181
+float	vec2f_dist_origin(94,1370
+t_vec2f vec2f_normalize(103,1506
+float	vec2f_dist_ab(112,1656
+t_vec2f vec2f_apply_fn_float(121,1842
+t_vec2f vec2f_apply_fn_int(129,1973
+
+BSVL/BSVL.h,808
+# define BSVL_H2,15
+typedef struct		s_vec2f8,115
+	float		x;10,141
+	float		y;11,152
+}			t_vec2f;12,163
+typedef struct		s_vec3f14,177
+	float		x;16,203
+	float		y;17,214
+	float		z;18,225
+}			t_vec3f;19,236
+typedef struct		s_vec4f21,250
+	float		x;23,276
+	float		y;24,287
+	float		z;25,298
+	float		w;26,309
+}			t_vec4f;27,320
+typedef t_vec3f		t_mat3[t_mat329,334
+typedef t_vec4f		t_mat4[t_mat430,362
+typedef struct		s_tri32,391
+	t_vec3f		a;34,415
+	t_vec3f		b;35,428
+	t_vec3f		c;36,441
+}			t_tri;37,454
+typedef struct		s_ray39,466
+	t_vec3f		origin;41,490
+	t_vec3f		direction;42,508
+}			t_ray;43,529
+typedef struct		s_cam45,541
+	t_ray		posdata;47,565
+	float		fov;48,582
+	t_vec3f		focus;49,595
+}			t_cam;50,612
+enum			axis52,624
+	X,54,638
+	Y,55,642
+	Z,56,646
+	__AXIS_TOTAL57,650
+
+utils/utils.h,46
+#define _UTILS_H_2,18
+# define USAGE(12,383
+
+utils/usage.c,17
+void	usage(4,35
+
+utils/monitoring.c,63
+void segfault_sigaction(5,65
+void	libwowie_safety_net(22,466
+
+utils/parse_flags.c,58
+#define __ARGUMENTS_MAX 5,85
+uint8_t		parse_flags(7,112
+
+search/search.c,47
+int		search_bin(1,0
+int		search_brute(22,410
+
+search/search.h,24
+#define _SEARCH_H_2,19
+
+templates/inc/generic-header.h,31
+#define BULLSHIT_SRC_H_23,726
+
+templates/src/generic-c-source.c,18
+int	main(52,1890
+
+error/error.h,23
+#define _ERROR_H_2,18
+
+error/error.c,17
+void	error(3,20
+
+mem/memcpy.c,37
+void	*wowie_memcpy(wowie_memcpy1,0
+
+mem/mem_test.c,63
+#define MOD_TEST_MSG 1,0
+#define UNUSED 2,52
+int main(9,169
+
+mem/memdup.c,38
+void	*wowie_memdup(wowie_memdup3,21
+
+mem/memcmp.c,23
+int	wowie_memcmp(3,21
+
+mem/memalloc.c,42
+void	*wowie_memalloc(wowie_memalloc4,38
+
+mem/memccpy.c,28
+void	*memccpy(memccpy3,21
+
+mem/memmove.c,40
+void *wowie_memmove(wowie_memmove3,18
+
+mem/bzero.c,23
+void	wowie_bzero(3,18
+
+mem/memset.c,37
+void	*wowie_memset(wowie_memset1,0
+
+mem/memchr.c,37
+void	*wowie_memchr(wowie_memchr1,0
+
+mem/mem.h,22
+# define _MEM_H_2,16
+
+utils/kek.c,0
+
+buffers/buff_init.c,59
+# define BUFFSIZE 2,32
+uint8_t	*buff_init(buff_init4,55
+
+buffers/buffer_functions.c,144
+#define BUFFSIZE 14,912
+bool	buff_flush(16,934
+size_t	buff_get_remainder(25,1077
+bool	buff_write(35,1253
+char	*buff_init(buff_init57,1738
+
+buffers/buff_flush.c,22
+bool	buff_flush(4,46
+
+buffers/buff_write.c,24
+bool	buff_write(16,935
+
+buffers/buff_get_remainder.c,34
+size_t	buff_get_remainder(16,935
+
+buffers/buff_get_input.c,26
+void	buff_get_input(4,44
+
+buffers/buff_clear.c,22
+void	buff_clear(3,24
+
+buffers/buffers.h,49
+# define BUFFERS_H2,18
+# define BUFFSIZE 6,117
+
+strings/atoi.c,16
+int		atoi(3,22
+
+strings/strnext.c,28
+char	*strnext(strnext4,46
+
+strings/itoa.c,23
+char		*itoa(itoa3,22
+
+strings/strchr.c,26
+char	*strchr(strchr3,24
+
+strings/strcspn.c,21
+size_t	strcspn(4,25
+
+strings/putnbr.c,18
+void	putnbr(3,22
+
+strings/strstr.c,26
+char	*strstr(strstr4,48
+
+strings/intlen.c,16
+int	intlen(1,0
+
+strings/strlen.c,21
+size_t		strlen(3,24
+
+strings/strings.h,55
+# define _STRINGS_H_2,20
+# define GNL_BUFF_SIZE 3,41
+
+strings/strdup.c,26
+char	*strdup(strdup3,22
+
+strings/strclean.c,30
+char	*strclean(strclean3,22
+
+strings/putchar.c,20
+void	_putchar(3,21
+
+strings/putstr.c,18
+void	putstr(4,44
+
+strings/strcmp.c,17
+int	strcmp(3,24
+
+strings/strncpy.c,20
+void	_strncpy(3,24
+
+strings/str_bin_search.c,25
+int	str_search_bin(3,33
+
+data-structures/stacks/wowie_lstacks.h,200
+#define _WOWIE_LSTACKS_H_2,26
+struct  s_lstack 6,116
+	t_list	*head;head7,135
+	t_list	*top;top8,150
+	size_t	top_pos;9,164
+	size_t	size;10,181
+typedef struct s_lstack *t_lstack;t_lstack13,199
+
+data-structures/stacks/stack_error.c,64
+const	char *__g_error_stk_messages[__g_error_stk_messages3,29
+
+data-structures/stacks/wowie_stacks.h,512
+#define _WOWIE_STACKS_H_2,25
+# define STACK_DEFAULT_SIZE 13,215
+struct	s_stack 18,284
+	void		**data;data19,301
+	int		top;20,316
+	size_t		max_entries;21,327
+	size_t		*entry_sizes;entry_sizes22,349
+	size_t		__debug_mem_usage;23,372
+enum	stack_err 27,412
+	E_STACK_FULL,28,429
+	E_STACK_EMPTY,29,444
+	E_STACK_OK,30,460
+	E_STACK_ALLOC_FAILED,31,473
+	E_STACK_ABNORMAL,32,496
+	__E_STK_MAX_ERR,33,515
+# define STK_ERR_ARRAY 37,597
+# define STKERR(38,643
+typedef struct s_stack	*t_stack;t_stack40,733
+
+data-structures/stacks/lstack_test.c,141
+#define UNUSED 4,69
+typedef struct	s_vec3{s_vec37,129
+	float x;8,152
+	float y;9,162
+	float z;10,172
+}		t_vec3;11,182
+int	main(13,226
+
+data-structures/stacks/stack_test.c,140
+#define UNUSED 3,47
+typedef struct	s_vec3{s_vec36,107
+	float x;7,130
+	float y;8,140
+	float z;9,150
+}		t_vec3;10,160
+int	main(12,204
+
+data-structures/stacks/wowie_stacks.c,421
+struct	s_stack 6,87
+	void		**data;data7,104
+	int		top;8,119
+	size_t		max_entries;9,130
+	size_t		*entry_sizes;entry_sizes10,152
+	size_t		__debug_mem_usage;11,175
+t_stack	stack_new(15,215
+void	stack_push(48,902
+void	*stack_pop(stack_pop71,1495
+void	*stack_peek(stack_peek91,1919
+bool	stack_empty(95,1990
+bool	stack_full(99,2054
+int	stack_top(103,2141
+int	stack_check(107,2195
+void	stack_cleanup(123,2475
+
+data-structures/stacks/wowie_lstacks.c,192
+t_lstack lstack_new(12,160
+void	lstack_push(26,438
+void	*lstack_pop(lstack_pop34,657
+bool	lstack_empty(43,952
+void	*lst_stack_peek(lst_stack_peek47,1010
+void	lst_stack_cleanup(51,1072
+
+data-structures/trees/tree_map.c,86
+void	tree_map_inorder(4,46
+void	tree_map_preorder(12,181
+void	tree_map_post(20,319
+
+data-structures/trees/tree_insert.c,23
+void	tree_insert(3,25
+
+data-structures/trees/tree_search.c,38
+t_tree	*tree_search(tree_search5,74
+
+data-structures/trees/tree_new.c,32
+t_tree	*tree_new(tree_new3,25
+
+data-structures/trees/wowie_tree_error.c,66
+const char *__g_error_tree_messages[__g_error_tree_messages3,27
+
+data-structures/trees/tree_test.c,15
+int	main(6,86
+
+data-structures/trees/wowie_tree.h,307
+# define _TREE_H_2,17
+typedef struct	s_tree 6,85
+	struct	s_tree *l;l7,109
+	struct	s_tree *r;r8,128
+	void	*data;data9,147
+	size_t	size;10,160
+}		t_tree;11,174
+enum	tree_errors 13,186
+	E_TREE_ATTEMPTED_NULL,14,205
+	__E_TREE_MAX_ERR,15,229
+# define TREE_ERR_ARRAY 21,335
+# define TREEERR(22,383
+
+data-structures/trees/tree_delete.c,70
+void	node_clear(4,46
+void	tree_print(13,175
+void	tree_clear(19,284
+
+data-structures/hashmaps/inc/wowie-hashmaps.h,389
+#define LIBWOWIE_HASHMAP_SRC_H_2,32
+	char	     *key;key31,1076
+	void	     *val;val32,1093
+}	item_t;33,1110
+	item_t	  *items;items36,1138
+	uint32_t  length;37,1156
+	uint32_t  (*__hash_fn)__hash_fn38,1175
+}	hashmap_t;39,1245
+	HASHMAP_RET_OK,42,1274
+	HASHMAP_RET_ERROR,43,1291
+	HASHMAP_RET_ALLOCATION_ERROR,44,1311
+	__HASHMAP_ERROR_MAX45,1342
+}	e_hashmap_return_code;46,1363
+
+data-structures/hashmaps/src/hashmap-test.c,36
+#define UNUSED 3,50
+int	main(5,90
+
+data-structures/hashmaps/src/hashmaps.c,274
+uint32_t		hash(32,1230
+hashmap_t		*hashmap_init(hashmap_init39,1431
+e_hashmap_return_code	hashmap_destroy(66,1975
+e_hashmap_return_code	hashmap_item_insert(77,2223
+e_hashmap_return_code	hashmap_item_delete(90,2630
+item_t			*hashmap_item_get(hashmap_item_get101,2861
+
+data-structures/hashmaps/src/crc32.c,90
+#define CRC32_POLYNOMIAL 3,21
+uint32_t CRC32_LTU[CRC32_LTU5,99
+uint32_t	crc32(40,3011
+
+data-structures/data_structures.h,33
+#define _DATA_STRUCTURES_H_2,28
+
+data-structures/heaps/heaps.h,184
+# define _HEAPS_H_2,18
+typedef	struct	s_heap 9,151
+	void		**data;data10,175
+	uint32_t	size_max;11,190
+	uint32_t	size_current;12,210
+	int32_t		(*cmp)cmp13,234
+}		t_heap;14,268
+
+data-structures/heaps/wowie-heaps.c,471
+t_heap		*heap_create(heap_create5,59
+void	        heap_destroy(20,387
+static void	heap_swap(25,463
+static void	heap_fixup(35,699
+int32_t		heap_push(48,964
+t_heap		*heapify(heapify60,1192
+void		heap_clear(74,1440
+static uint32_t	heap_fixdown(79,1550
+void		*heap_pop(heap_pop100,1949
+uint32_t		heap_get_index_p(111,2182
+uint32_t		heap_get_index_l(115,2271
+uint32_t		heap_get_index_r(119,2337
+bool		heap_empty_p(123,2403
+void		*heap_peek(heap_peek127,2490
+
+data-structures/heaps/heap/heap.c,146
+Heap* HEAP_INIT(9,103
+void HEAP_DESTROY(18,370
+int HEAP_ADD(22,442
+void* HEAP_PEEK(40,1027
+void* HEAP_REMOVE(45,1131
+int HEAP_EMPTY(85,2388
+
+data-structures/heaps/heap/example.c,71
+int compareIntsMax(10,184
+int compareIntsMin(16,359
+int main(21,478
+
+data-structures/heaps/heap/heap.h,140
+#define HEAP_H6,60
+    void** heap;11,170
+    int (*compare)compare19,456
+    int length;22,617
+    int maxSize;24,695
+} Heap;25,712
+
+data-structures/heaps/heap_test.c,57
+void	f(5,59
+void		str_heap_dump(9,113
+int	main(14,207
+
+data-structures/linked-lists/lst_search_brute_with_ref.c,69
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref22,769
+
+data-structures/linked-lists/lst_delete_lst.c,47
+t_list		*lst_delete_lst(lst_delete_lst21,716
+
+data-structures/linked-lists/lst_map.c,173
+t_list		*lst_map(lst_map3,26
+static void	__lst_mapr_inplace_internal(26,390
+t_list		*lst_mapr_inplace(lst_mapr_inplace33,569
+t_list		*lst_mapr_cpy(lst_mapr_cpy41,734
+
+data-structures/linked-lists/lst_find_prev.c,45
+t_list		*lst_find_prev(lst_find_prev21,593
+
+data-structures/linked-lists/lst_fold.c,31
+void		*lst_fold(lst_fold3,26
+
+data-structures/linked-lists/lst_insert_link_next.c,57
+t_list		*lst_insert_link_next(lst_insert_link_next3,26
+
+data-structures/linked-lists/lst_attach_end.c,47
+t_list		*lst_attach_end(lst_attach_end22,626
+
+data-structures/linked-lists/lst_search_brute_no_ref.c,65
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref21,666
+
+data-structures/linked-lists/wowie_lists.h,775
+# define _WOWIE_LISTS_H_2,24
+enum	lst_errors 10,151
+	E_NOERROR,11,169
+	E_LST_ATTACH_ATTEMPTED_NULL,12,181
+	E_LST_SEARCH_ATTEMPTED_NULL_HEAD,13,211
+	E_LST_SEARCH_ATTEMPTED_NULL_TAIL,14,246
+	E_LST_SEARCH_ATTEMPTED_NULL_FN,15,281
+	E_LST_FIND_NO_LIST,16,314
+	E_LST_MAP_ATTEMPTED_NULL,17,335
+	E_LST_MAP_ATTEMPTED_NULL_FN,18,362
+	E_LST_FOLD_ATTEMPTED_NULL_FN,19,392
+	E_LST_FOLD_ATTEMPTED_NULL_HEAD,20,423
+	E_LST_FOLD_TOO_SMALL,21,456
+	E_LST_DEL_ATTEMPTED_NULL,22,479
+	__E_LST_MAX_ERR,23,506
+	E_ALLOC_ATTEMPTED_0_SIZE,24,524
+	E_ALLOC_ATTEMPTED_NULL,25,551
+	E_ALLOC_FAILED,26,576
+typedef struct	s_list 29,597
+	void		*data;data30,621
+	size_t		size;31,635
+	struct	s_list	*next;next32,650
+}		t_list;33,672
+# define LST_ERR_ARRAY 37,764
+# define LSTERR(38,810
+
+data-structures/linked-lists/lst_delete_link.c,49
+t_list		*lst_delete_link(lst_delete_link24,892
+
+data-structures/linked-lists/wowie_lst_error.c,64
+const char *__g_error_lst_messages[__g_error_lst_messages3,28
+
+data-structures/linked-lists/lst_len.c,22
+size_t		lst_len(3,26
+
+data-structures/linked-lists/lst_insert_link_prev.c,57
+t_list		*lst_insert_link_prev(lst_insert_link_prev3,26
+
+data-structures/linked-lists/lst_find_end.c,43
+t_list		*lst_find_end(lst_find_end19,580
+
+data-structures/linked-lists/lst_cpy_link.c,40
+t_list	*lst_cpy_link(lst_cpy_link3,26
+
+data-structures/linked-lists/lst_clear.c,37
+t_list		*lst_clear(lst_clear20,676
+
+data-structures/linked-lists/lst_cpy_lst.c,38
+t_list	*lst_cpy_lst(lst_cpy_lst3,26
+
+data-structures/linked-lists/lst_attach_start.c,51
+t_list		*lst_attach_start(lst_attach_start21,664
+
+data-structures/linked-lists/wowie_lists.c,933
+t_list		*lst_new_link(lst_new_link23,675
+t_list		*lst_find_end(lst_find_end81,1823
+t_list		*lst_find_prev(lst_find_prev114,2604
+t_list		*lst_attach_end(lst_attach_end149,3476
+t_list		*lst_attach_start(lst_attach_start181,4368
+t_list		*lst_search_brute_with_ref(lst_search_brute_with_ref209,5301
+t_list		*lst_search_brute_no_ref(lst_search_brute_no_ref251,6439
+t_list		*lst_delete_link(lst_delete_link295,7724
+t_list		*lst_delete_lst(lst_delete_lst339,8934
+t_list		*lst_insert_link_prev(lst_insert_link_prev364,9331
+t_list		*lst_insert_link_next(lst_insert_link_next373,9539
+t_list		*lst_map(lst_map384,9773
+t_list	*lst_cpy_link(lst_cpy_link408,10138
+t_list	*lst_cpy_lst(lst_cpy_lst415,10253
+static void	__lst_mapr_inplace_internal(432,10629
+t_list		*lst_mapr_inplace(lst_mapr_inplace439,10808
+t_list		*lst_mapr_cpy(lst_mapr_cpy447,10973
+void		*lst_fold(lst_fold456,11158
+size_t		lst_len(492,11826
+
+data-structures/linked-lists/list_test.c,303
+t_list	*__test_new_link_creation(__test_new_link_creation6,87
+bool	f(14,307
+t_list	*__test_attach_end(__test_attach_end19,355
+t_list	*__test_attach_start(__test_attach_start33,830
+void	__test_list_deletion(47,1320
+void	lst_print(52,1399
+void	__test_new_link_deletion(61,1512
+int	main(71,1718
+
+data-structures/linked-lists/lst_new_link.c,43
+t_list		*lst_new_link(lst_new_link22,663
+
+data-structures/dynarray/wowie-dynarray.h,837
+# define _WOWIE_DYNARRAY_H_2,27
+# define DYNARRAY_L1_DEFAULT_SIZE 9,164
+# define DYNARRAY_L2_DEFAULT_SIZE 10,202
+enum	dynarray_errors 12,241
+	__E_DYNARRAY_MAX_ERR13,264
+enum	dynarray_layers 16,290
+	E_DYNARRAY_L1,17,313
+	E_DYNARRAY_L2,18,329
+enum	DYNARRAY_ERRORS 21,349
+	E_FAILED_ALLOC,22,372
+}	DYNARRAY_ERRORS;23,389
+typedef struct  s_dynarray_entry 25,409
+	void		*data;data26,444
+	uint32_t	size;27,458
+}		t_dynarray_entry;28,474
+typedef struct	s_dynarray 30,496
+	uint64_t	 size;31,524
+	t_dynarray_entry *entries;entries32,541
+	uint32_t	l1_size;33,569
+	uint32_t	l2_size;34,588
+	uint64_t	l1_used;35,607
+	uint64_t	*l2_used;l2_used36,626
+	uint64_t	layer_expands[layer_expands37,646
+	uint64_t	layer_shrinks[layer_shrinks38,678
+}		t_dynarray;39,738
+# define DYNARR_ERR_ARRAY 43,844
+# define DYNARRAYERR(44,898
+
+data-structures/dynarray/dynarray_test.c,193
+#define UNUSED 3,63
+void		bs_display(7,142
+bool		bs_cmp(13,233
+bool		eq_str_cmp(24,443
+int		eq_memcmp_deref(30,556
+uint8_t g_kb[g_kb40,817
+uint8_t g_mb[g_mb42,1867
+int	main(44,101896
+
+data-structures/dynarray/wowie-dynarray.c,434
+t_dynarray *dynarray_init(dynarray_init27,920
+void		dynarray_push(60,1946
+void		dynarray_grow_l1(79,2601
+void		dynarray_grow_l2(98,3191
+void		dynarray_delitem(109,3455
+void		dynarray_clean(122,3761
+void		dynarray_destroy(133,3940
+void		dynarray_sort(140,4092
+int		dynarray_search_brute(152,4456
+void		dynarray_map(160,4692
+void		dynarray_dump(165,4855
+bool		dynarray_is_sorted(169,4971
+int	dynarray_bin_cmp_str(176,5202
+
+types/u8stou16.c,24
+uint16_t	u8stou16(3,21
+
+types/u16stou32.c,25
+uint32_t	u16stou32(3,21
+
+types/u32tou16s.c,22
+void		u32tou16s(4,40
+
+types/u16tou8s.c,21
+void		u16tou8s(3,21
+
+types/u32stou8s.c,21
+void		u32tou8s(3,21
+
+types/test.c,15
+int main(4,39
+
+types/u8stou32.c,24
+uint32_t	u8stou32(3,21
+
+libwowie.h,27
+# define _LIBWOWIE_H_2,21
+
+BSVL/math_utils.c,117
+float	min(3,19
+float 	max(10,99
+float	sqr(17,180
+float 	clamp(22,221
+float	lerp(27,309
+float	deg_to_rad(32,379
+
+BSVL/vec4.c,248
+void	get_vec4_identity_matrix(3,19
+void	get_view_matrix(10,236
+void	get_arbitrary_rot_mat(25,650
+void	get_translation_matrix(38,1268
+void	get_and_apply_translation_matrix(46,1512
+t_vec4f vec4f_mul_vec(56,1751
+t_vec4f	vec4f_mul_mat4f(67,1910
+
+BSVL/vec3.c,1058
+void	vec3f_copy(5,89
+void	vec3f_set(12,213
+t_vec3f vec3f_add_vec(19,324
+t_vec3f vec3f_add_k(29,463
+t_vec3f vec3f_sub_vec(39,593
+t_vec3f vec3f_sub_k(49,732
+t_vec3f vec3f_div_k(59,861
+t_vec3f vec3f_div_vec(68,989
+t_vec3f vec3f_mod_vec(78,1128
+t_vec3f vec3f_mod_k(88,1285
+t_vec3f vec3f_mul_vec(98,1432
+t_vec3f vec3f_mul_k(108,1571
+float	vec3f_dotprod(118,1700
+t_vec3f	vec3f_crossprod(130,1919
+t_vec3f vec3f_normalize(140,2115
+float	vec3f_dist_origin(152,2306
+float	vec3f_dist_ab(164,2480
+t_vec3f vec3f_apply_fn_int(176,2729
+t_vec3f vec3f_apply_fn_float(186,2873
+t_vec3f vec3f_max(196,3023
+t_vec3f vec3f_min(206,3186
+t_vec3f vec3f_mul_mat3(216,3349
+t_vec3f	vec3f_mul_mat4f(230,3742
+void	get_vec3_identity_matrix(238,3931
+void	get_roll_matrix(245,4071
+void	get_pitch_matrix(252,4259
+void	get_yaw_matrix(259,4450
+void	get_rotation_matrix(266,4639
+void	apply_rotation_matrix(276,4873
+void	get_and_apply_rotation_matrix(280,4980
+bool	vec3f_cmp(287,5226
+t_vec3f vec3_lerp(298,5453
+t_vec3f		refract(307,5626
+t_vec3f		reflect(314,5843
+
+BSVL/vec2.c,447
+void	vec2f_copy(3,19
+void	vec2f_set(9,118
+t_vec2f vec2f_add(15,206
+t_vec2f vec2f_sub(24,322
+t_vec2f vec2f_div_k(33,437
+t_vec2f vec2f_div_vec(42,548
+t_vec2f vec2f_mul_vec(51,667
+t_vec2f	vec2f_mul_mat2f(60,786
+t_vec2f vec2f_mul_k(74,1070
+float	vec2f_dotprod(83,1181
+float	vec2f_dist_origin(94,1370
+t_vec2f vec2f_normalize(103,1506
+float	vec2f_dist_ab(112,1656
+t_vec2f vec2f_apply_fn_float(121,1842
+t_vec2f vec2f_apply_fn_int(129,1973
+
+BSVL/BSVL.h,808
+# define BSVL_H2,15
+typedef struct		s_vec2f8,115
+	float		x;10,141
+	float		y;11,152
+}			t_vec2f;12,163
+typedef struct		s_vec3f14,177
+	float		x;16,203
+	float		y;17,214
+	float		z;18,225
+}			t_vec3f;19,236
+typedef struct		s_vec4f21,250
+	float		x;23,276
+	float		y;24,287
+	float		z;25,298
+	float		w;26,309
+}			t_vec4f;27,320
+typedef t_vec3f		t_mat3[t_mat329,334
+typedef t_vec4f		t_mat4[t_mat430,362
+typedef struct		s_tri32,391
+	t_vec3f		a;34,415
+	t_vec3f		b;35,428
+	t_vec3f		c;36,441
+}			t_tri;37,454
+typedef struct		s_ray39,466
+	t_vec3f		origin;41,490
+	t_vec3f		direction;42,508
+}			t_ray;43,529
+typedef struct		s_cam45,541
+	t_ray		posdata;47,565
+	float		fov;48,582
+	t_vec3f		focus;49,595
+}			t_cam;50,612
+enum			axis52,624
+	X,54,638
+	Y,55,642
+	Z,56,646
+	__AXIS_TOTAL57,650
+
+utils/utils.h,46
+#define _UTILS_H_2,18
+# define USAGE(12,383
+
+utils/bprint/bprint.c,295
+static int	_strlen(3,21
+static void	putstr(10,99
+static char	*uitoa_base(uitoa_base14,157
+static char	*itoa_base(itoa_base42,634
+static void	_strncpy(70,1065
+static void	_memset(79,1213
+int     bprint(85,1305
+		int i;93,1541
+		char c;94,1550
+		char *s;s95,1560
+		void *p;p96,1571
+
+utils/bprint/test.c,15
+int main(3,21
+
+utils/bprint/bprint.h,25
+# define _BPRINT_H_2,19
+
+utils/usage.c,17
+void	usage(4,35
+
+utils/monitoring.c,63
+void segfault_sigaction(5,65
+void	libwowie_safety_net(13,294
+
+utils/parse_flags.c,93
+# define __BITFIELD_TYPE 8,218
+#define __ARGUMENTS_MAX 11,259
+uint8_t		parse_flags(13,313
+
+search/search.c,47
+int		search_bin(1,0
+int		search_brute(22,410
+
+search/search.h,24
+#define _SEARCH_H_2,19
+
+templates/inc/generic-header.h,31
+#define BULLSHIT_SRC_H_23,726
+
+templates/src/inc/generic-header.h,31
+#define BULLSHIT_SRC_H_23,726
+
+templates/src/generic-c-source.c,18
+int	main(52,1890
+
+error/error.h,23
+#define _ERROR_H_2,18
+
+error/error.c,17
+void	error(3,20
+
+mem/memcpy.c,37
+void	*wowie_memcpy(wowie_memcpy1,0
+
+mem/memdup.c,38
+void	*wowie_memdup(wowie_memdup3,21
+
+mem/memcmp.c,23
+int	wowie_memcmp(3,21
+
+mem/memalloc.c,202
+stack_t	wowie_mem_get_stack(7,116
+void	dump_mem_stack(20,330
+void	wowie_mem_dump_stack(37,630
+void	*wowie_memalloc_monitor(wowie_memalloc_monitor43,723
+void	*wowie_memalloc(wowie_memalloc60,1132
+
+mem/free2darray.c,23
+void	free2darray(4,41
+
+mem/memccpy.c,28
+void	*memccpy(memccpy3,21
+
+mem/mem-test.c,63
+#define MOD_TEST_MSG 1,0
+#define UNUSED 2,50
+int main(9,167
+
+mem/memmove.c,40
+void *wowie_memmove(wowie_memmove3,18
+
+mem/bzero.c,23
+void	wowie_bzero(3,18
+
+mem/memset.c,37
+void	*wowie_memset(wowie_memset1,0
+
+mem/memchr.c,37
+void	*wowie_memchr(wowie_memchr1,0
+
+mem/mem.h,220
+# define _MEM_H_2,16
+	void *addr;addr14,431
+	size_t n;15,444
+	const char *file;file16,455
+	const char *function;function17,474
+	const int line;18,497
+}	allocation_data_t;19,514
+#  define wowie_memalloc(22,567
+
+utils/kek.c,0
+
+types/types.h,0

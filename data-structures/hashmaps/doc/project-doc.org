@@ -1,0 +1,26 @@
+#+TITLE: Data structure: Hashmaps!
+#+OPTIONS: ^:nil
+* Hashmaps
+  This is an implementation of a hashmap.
+  The hashing algorithm used is CRC32.
+  You might know this datastructure as a "dictionary" or a "key-value" pair.
+
+* Documentation
+** Notes
+   These hashmaps are generic, and only produces shallow copies of your data.
+   Does not handle colisions.
+
+#+BEGIN_SRC c
+typedef struct
+{
+	char	     *key;
+	void	     *val;
+}	item_t;
+
+uint32_t		crc32(uint8_t *data, uint32_t size, uint32_t init);	  // computes a crc32 checksum from a piece of data. can be used as hashing algorithm 
+hashmap_t		*hashmap_init(uint32_t size);				  // initialises a hashmap.
+e_hashmap_return_code	hashmap_destroy(hashmap_t *hashmap);			  // deletes a hashmap.
+e_hashmap_return_code	hashmap_item_insert(hashmap_t *hashmap, item_t *item);    // inserts an item_t in a hashmap.
+e_hashmap_return_code	hashmap_item_delete(hashmap_t *hashmap, char *key);	  // deletes an item_t in a hashmap.
+item_t			*hashmap_item_get(hashmap_t *hashmap,			  // returns pointer to hashmap containing data stored @ hash(key)
+#+END_SRC

@@ -1,0 +1,15 @@
+#include "./wowie_lists.h"
+
+const char *__g_error_lst_messages[__E_LST_MAX_ERR]	= {
+	        [E_LST_ATTACH_ATTEMPTED_NULL]		=     "E_LST_ATTACH_ATTEMPTED_NULL",
+	        [E_LST_SEARCH_ATTEMPTED_NULL_HEAD]	=     "E_LST_SEARCH_ATTEMPTED_NULL_HEAD",
+	        [E_LST_SEARCH_ATTEMPTED_NULL_TAIL]	=     "E_LST_SEARCH_ATTEMPTED_NULL_TAIL",
+	        [E_LST_SEARCH_ATTEMPTED_NULL_FN]	=     "E_LST_SEARCH_ATTEMPTED_NULL_FN, 	",
+	        [E_LST_FIND_NO_LIST]			=     "E_LST_FIND_NO_LIST,             	",
+	        [E_LST_MAP_ATTEMPTED_NULL]		=     "E_LST_MAP_ATTEMPTED_NULL,       	",
+	        [E_LST_MAP_ATTEMPTED_NULL_FN]		=     "E_LST_MAP_ATTEMPTED_NULL_FN,    	",
+	        [E_LST_FOLD_ATTEMPTED_NULL_FN]		=     "E_LST_FOLD_ATTEMPTED_NULL_FN,   	",
+	        [E_LST_FOLD_ATTEMPTED_NULL_HEAD]	=     "E_LST_FOLD_ATTEMPTED_NULL_HEAD, 	",
+	        [E_LST_FOLD_TOO_SMALL]			=     "E_LST_FOLD_TOO_SMALL,           	",
+	        [E_LST_DEL_ATTEMPTED_NULL]		=     "E_LST_DEL_ATTEMPTED_NULL,       	",
+};

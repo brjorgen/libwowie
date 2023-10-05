@@ -1,0 +1,35 @@
+#+TITLE: The Libwowie Documentation
+#+HTML_HEAD:<link href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" rel="stylesheet"></link>
+#+OPTIONS: ^:nil
+
+* Libwowie : 'Cause f*ck it, You need a lib with this stuff anyways.
+  Sheer laziness is what inspired this. Aren't you tired of having to implement a bunch
+  of stuff you could just have at your fingertips with a single #include?
+
+* What's in there?
+  - Data structures
+    - Linked Lists
+    - Stacks
+    - Linked-List powered Stacks (lstacks)
+    - B-Trees
+    - Binary Heaps
+    - Hashmaps (crc32)
+  - Singleton buffers
+  - Memory manipulation
+  - String manipulation
+  - A generic error interface
+  - Search functions
+  - <stdint.h> Type conversions
+  - Linear algebra library (BSVL)
+
+  Most of these have accompanying test suites.
+
+* What's being worked on?
+   see [module_name]/todo.org
+
+* How to extend this lib
+** Code your own stuff - HMU on twitter if you think it's worth telling me about 🤓
+  1. Implement your extension & its Makefile (ideally with a rule for building a test binary).
+  2. Implement it's error() stuff.
+  3. Add it to the master Makefile.
+  4. Recompile.

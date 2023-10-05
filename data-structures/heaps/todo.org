@@ -1,0 +1,7 @@
+* TODO
+  - [ ] Write tests
+  - [ ] Write doc
+  - [X] write makefile
+
+* Bugs
+  - [ ] min incorrectly fetched

@@ -1,0 +1,7 @@
+#+TITLE: PLACEHOLDER  - INSERT NAME HERE PLZ
+#+OPTIONS: ^:nil
+* Title
+* What this is
+* Documentation
+** Overview
+** ...

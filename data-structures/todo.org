@@ -1,0 +1,11 @@
+* Data structures TODO
+** Heaps
+   Bug when deleting key - I Suspect fix-down to be the culprit.
+
+** Trees
+   There are Leaks reported by Mac OS's instruments when running test executable
+   with the leaks profiler. The file "debug.plist" is necessary for signing the
+   executable, a pre-requisite for profiling with Instruments.
+
+** Hashmaps
+   These hashmaps do NOT support collisions.

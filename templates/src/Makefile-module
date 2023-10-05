@@ -1,0 +1,26 @@
+NAME=libwowie-generic-module.a
+CC=clang
+CFLAGS=-Wall -Werror -Wextra
+SRCDIR=src
+OBJDIR=tmp
+BUILDDIR=target
+SRC=	$(wildcard $(SRCDIR)/*.c)
+OBJ =   $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRC))
+INC= -I ../
+
+$(OBJDIR)/%.o : $(SRCDIR)/%.c
+	$(CC) -c -o $@ $<   $(INC) $(CFLAGS)
+	echo compiled $@
+
+all : setup $(OBJ)
+	ar rc $(BUILDDIR)/$(NAME) $(OBJ)
+	ranlib $(BUILDDIR)/$(NAME)
+
+setup:
+	mkdir -p $(BUILDDIR) $(OBJDIR)
+
+clean:
+	rm -rf $(OBJDIR)
+
+fclean: clean
+	rm -rf $(BUILDDIR)

@@ -1,0 +1,55 @@
+* Documentation
+#+BEGIN_SRC c
+uint8_t		*buff_init(void);
+#+END_SRC
+     This returns a pointer to a static buffer declared on the stack.
+	 
+     This function spawns a static buffer of arbitrary
+     size on invocation and no memory management mechanisms are needed
+     as it is released on program exit.
+
+     Invoking this function will return a pointer to the beginning
+     of the buffer.
+
+#+BEGIN_SRC c
+bool		buff_set(uint8_t v);
+#+END_SRC
+     sets entirety of buffer to value of byte v
+
+#+BEGIN_SRC c
+bool		buff_flush(char *buff_ptr);
+#+END_SRC
+     writes the buffer to stdout zeroes it.
+
+#+BEGIN_SRC c
+bool		buff_flush_to(char *buff_ptr, int size, char *dest_ptr);
+#+END_SRC
+     writes n bytes of buff_ptr into dest_ptr.
+
+#+BEGIN_SRC c
+bool		buff_flush_fd(int fd, char *buff_ptr, int size);
+#+END_SRC
+#+BEGIN_SRC c
+void		buff_get_input(void);
+#+END_SRC
+     zeroes the buffer, reads input from stdin, untill a \n is met,
+     where it's replaced with a zero.
+
+#+BEGIN_SRC c
+size_t	buff_get_remainder(const char *buff_ptr);
+#+END_SRC
+     returns the amount free space left in the buffer
+
+#+BEGIN_SRC c
+bool	buff_write(char *buff_ptr, const char *data, const size_t size);
+#+END_SRC
+     writes _size_ bytes of data to the buffer.
+
+#+BEGIN_SRC c
+uint8_t	*buff_search(uint8_t *target);
+#+END_SRC
+	searches for the sequence of bytes target in buffer,
+     returns:
+     -  a pointer to the beginning of target in buffer if found
+     otherwise...
+     - returns  NULL otherwise.
