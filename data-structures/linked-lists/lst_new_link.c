@@ -20,32 +20,35 @@
 //	NOTES: 
 
 t_list		*lst_new_link(void *data, size_t size){
-	bool err = false;
+	/* bool err = false; */
 	int errcode = E_NOERROR;
 	t_list *new = NULL;
 
 	if (!data){
 		errcode = E_ALLOC_ATTEMPTED_NULL;
-		err = true;
+		LSTERR(errcode);
 	}
 	if (!size){
 		errcode = E_ALLOC_ATTEMPTED_0_SIZE;
-		err = true;
-	}
-	if (err != E_NOERROR){
-		goto error;
+		LSTERR(errcode);
 	}
 
 	new = malloc(sizeof(*new));
 	if (!new){
 		errcode = E_ALLOC_FAILED;
-		goto error;
+		LSTERR(errcode);
 	}
 
 	new->data = malloc(size);
 	if (!new->data){
 		errcode = E_ALLOC_FAILED;
-		goto error;
+		LSTERR(errcode);
+	}
+
+	if (errcode != E_NOERROR){
+		if (new->data) free(new->data);
+		if (new) free(new);
+		return (NULL);
 	}
 
 	wowie_memcpy(new->data, data, size);
@@ -53,9 +56,4 @@ t_list		*lst_new_link(void *data, size_t size){
 	new->next = NULL;
 	return (new);
 
-error:
-	LSTERR(errcode);
-	if (new->data) free(new->data);
-	if (new) free(new);
-	return (NULL);
 }

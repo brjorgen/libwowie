@@ -59,7 +59,6 @@ fclean: clean
 	rm $(NAME)
 
 test: all
-	$(CC) $(CFLAGS) -o list-test $(NAME) ./list_test.c $(TESTDEP)
+	$(CC) $(CFLAGS) -o list-test $(NAME) ./lst_test.c $(TESTDEP)
 
 test-clean: fclean
-	rm ./list_test.c

@@ -28,8 +28,9 @@
    see [module_name]/todo.org
 
 * How to extend this lib
-** Code your own stuff - HMU on twitter if you think it's worth telling me about 🤓
-  1. Implement your extension & its Makefile (ideally with a rule for building a test binary).
+** Code your own stuff - HMU on bluesky if you think it's worth telling me about 🤓
+  1. Implement your extension & its Makefile
+     ! Note: I will not accept any PRs without tests !
   2. Implement it's error() stuff.
   3. Add it to the master Makefile.
-  4. Recompile.
+  4. Recompile

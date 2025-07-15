@@ -11,34 +11,30 @@
 //	NULL head, NULL tail, NULL deletion function.
 //--------------------------------------------------
 //	DESCRIPTION:
-//	Iteratively delete every link in the list.
+//	Iterates over a t_list, frees the link's data pointer and the link itself. 
 //--------------------------------------------------
 //	NOTES:
 //	do NOT free anything outside the CONTENTS of the _data_ pointer. 
 //	In other words: DO NOT free the data pointer yourself, that's handled here.
 //	should really be called clear.
 
-t_list		*lst_delete_lst(t_list *head, bool (f_data_delete)(t_list *)){
-	bool err = false;
+void	lst_delete_lst(t_list **head, bool (f_data_delete)(t_list *)){
 	if (!head){
 		LSTERR(E_LST_DEL_ATTEMPTED_NULL);
-		err = true;
-	}
-	if (err){
-		return (head);
+		return;
 	}
 
-	t_list *next;
+	t_list *next = NULL;
+	t_list *traveller = *head;
 
-	next = NULL;
-	while (head){
-		next = head->next;
+	while (traveller){
+		next = traveller->next;
 		if (f_data_delete)
-			f_data_delete(head->data);
-		free(head->data);
-		head->data = NULL;
-		free(head);
-		head = next;
+			f_data_delete(traveller->data);
+		free(traveller->data);
+		traveller->data = NULL;
+		free(traveller);
+		traveller = next;
 	}
-	return (head);
+	*head = NULL;
 }

@@ -8,6 +8,7 @@ void	*wowie_memchr(const void *s, int c, unsigned long n);
 void	*wowie_memdup(const void *b, unsigned long n);
 void	*wowie_memcpy(void *restrict dst, const void *restrict src, unsigned long n);
 int	wowie_memcmp(void *a, void *b, size_t n);
+void	wowie_memdump(uint8_t *data, size_t size);
 
 # ifdef MEMORY_MONITORING
 struct  {

@@ -1,11 +1,39 @@
-* Data structures TODO
+* Data structures
 ** Heaps
-   Bug when deleting key - I Suspect fix-down to be the culprit.
+*** Bugs
+    Bug when deleting key - I Suspect fix-down to be the culprit.
+*** Tasks
+**** TODO Leaks Check
+**** TODO Implement Unit Tests
 
 ** Trees
-   There are Leaks reported by Mac OS's instruments when running test executable
-   with the leaks profiler. The file "debug.plist" is necessary for signing the
-   executable, a pre-requisite for profiling with Instruments.
+*** Bugs   
+    There are Leaks reported by Mac OS's instruments when running test executable
+    with the leaks profiler. The file "debug.plist" is necessary for signing the
+    executable, a pre-requisite for profiling with Instruments.
+
+*** Tasks
+**** TODO Leaks Check
+**** TODO Implement Unit Tests
 
 ** Hashmaps
-   These hashmaps do NOT support collisions.
+*** Bugs
+    These hashmaps do NOT support collisions.
+*** Tasks
+**** TODO Leaks Check
+**** TODO Implement Unit Tests
+
+** Stacks
+*** Bugs
+*** Tasks
+**** TODO Leaks Check
+**** DONE Implement Unit Tests
+     CLOSED: [2025-06-05 Thu 00:43]
+
+** Linked Lists
+*** Bugs
+*** Tasks
+**** DONE Leaks Check
+     CLOSED: [2025-06-03 Tue 23:17]
+**** DONE Implement Unit Tests
+     CLOSED: [2025-06-03 Tue 23:13]

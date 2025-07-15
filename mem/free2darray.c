@@ -6,7 +6,7 @@ void	free2darray(void **array, size_t size){
 
 	for (i = 0; i < size; i++)
 	{
-		free((uint8_t *)array[i]);
+		free(array[i]);
 		array[i] = NULL;
 	}
 	free(array);

@@ -23,6 +23,14 @@ t_list		*lst_map(t_list *head, void *(f)(t_list *)){
 	}
 	return (head);
 }
+
+t_list		*lst_map_cpy(t_list *head, void *(f)(t_list *)){
+	t_list *cpy = lst_cpy_lst(head);
+	cpy = lst_map(cpy, f);
+	return (cpy);
+}
+
+
 static void	__lst_mapr_inplace_internal(t_list *traveller, void *(f)(t_list *)){
 	if (traveller != NULL){
 		f(traveller);
@@ -30,7 +38,7 @@ static void	__lst_mapr_inplace_internal(t_list *traveller, void *(f)(t_list *)){
 	}
 }
 
-t_list		*lst_mapr_inplace(t_list *head, void *(f)(t_list *)){
+t_list		*lst_mapr(t_list *head, void *(f)(t_list *)){
 	t_list *traveller;
 
 	traveller = head;

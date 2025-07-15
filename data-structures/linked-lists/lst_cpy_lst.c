@@ -7,10 +7,10 @@ t_list	*lst_cpy_lst(t_list *head){
 
 	traveller = head;
 	cpy_head = lst_cpy_link(traveller);
-	cpy_traveller = cpy_head->next;
+	cpy_traveller = cpy_head;
 	traveller = traveller->next;
 	while (traveller){
-		cpy_traveller = lst_cpy_link(traveller);
+		cpy_traveller->next = lst_cpy_link(traveller);
 		cpy_traveller = cpy_traveller->next;
 		traveller = traveller->next;
 	}
