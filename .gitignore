@@ -1,6 +1,5 @@
 *.bin
 a.out
-*test*
 *.o
 *.lib
 *.a

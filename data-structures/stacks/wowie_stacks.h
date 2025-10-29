@@ -7,14 +7,11 @@
 # include <strings.h>
 # include <string.h>
 # include <assert.h>
-
+# include <stdbool.h>
 # include "../../error/error.h"
 
 # define STACK_DEFAULT_SIZE 255
 
-/* # define DEBUG */
-
-# ifdef DEBUG
 struct	s_stack {
 	void		**data;
 	int		top;
@@ -22,7 +19,6 @@ struct	s_stack {
 	size_t		*entry_sizes;
 	size_t		__debug_mem_usage;
 };
-# endif
 
 enum	stack_err {
 	E_STACK_FULL,
@@ -39,10 +35,12 @@ extern const char *__g_error_stk_messages[__E_STK_MAX_ERR];
 
 typedef struct s_stack	*t_stack;
 
-extern t_stack	stack_new(size_t allocation_size);
-extern void	stack_push(t_stack s_ptr, void *to_push, size_t size);
-extern void	*stack_pop(t_stack s_ptr);
-extern void	*stack_peek(t_stack s_ptr);
-extern void	stack_cleanup(t_stack s_ptr, void (f)(void *));
+t_stack	stack_new(size_t allocation_size);
+void stack_push(t_stack s_ptr, void *to_push, size_t size);
+void *stack_pop(t_stack s_ptr);
+void *stack_peek(t_stack s_ptr);
+void stack_cleanup(t_stack *s_ptr, void (*f)(void *));
+bool stack_empty(t_stack s_ptr);
+bool stack_full(t_stack s_ptr);
 
 #endif /* _WOWIE_STACKS_H_ */

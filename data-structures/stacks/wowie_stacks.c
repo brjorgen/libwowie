@@ -1,17 +1,6 @@
 #include "./wowie_stacks.h"
 #include <stdbool.h>
 
-//👨‍🍳🤌💋
-# ifndef DEBUG
-struct	s_stack {
-	void		**data;
-	int		top;
-	size_t		max_entries;
-	size_t		*entry_sizes;
-	size_t		__debug_mem_usage;
-};
-# endif
-
 t_stack	stack_new(size_t max_entries){
 	t_stack ret;
 	size_t allocation_size;
@@ -48,9 +37,8 @@ t_stack	stack_new(size_t max_entries){
 void	stack_push(t_stack s_ptr, void *to_push, size_t entry_size){
 	assert(s_ptr); assert(to_push); assert(entry_size != 0);
 
-	if (s_ptr->top == (long)s_ptr->max_entries){
+	if (s_ptr->top == (long)s_ptr->max_entries - 1){
 		STKERR(E_STACK_FULL);
-		stack_cleanup(s_ptr, NULL);
 		return;
 	}
 
@@ -60,7 +48,7 @@ void	stack_push(t_stack s_ptr, void *to_push, size_t entry_size){
 	s_ptr->data[s_ptr->top] = malloc(size);
 	if (!s_ptr->data[s_ptr->top]){
 		STKERR(E_STACK_ALLOC_FAILED);
-		stack_cleanup(s_ptr, NULL);
+		stack_cleanup(&s_ptr, NULL);
 		exit(EXIT_FAILURE);
 	}
 	memcpy(s_ptr->data[s_ptr->top], to_push, size);
@@ -68,24 +56,33 @@ void	stack_push(t_stack s_ptr, void *to_push, size_t entry_size){
 	s_ptr->__debug_mem_usage += size;
 }
 
-void	*stack_pop(t_stack s_ptr){
+void *stack_pop(t_stack s_ptr) {
 	void *ret;
 
-	if (s_ptr->top == -1){
+	if (!s_ptr || s_ptr->top == -1) {
 		STKERR(E_STACK_EMPTY);
-		return (NULL);
+		return NULL;
 	}
-	ret = malloc(s_ptr->entry_sizes[s_ptr->top]);
-	if (!ret){
+
+	if (!s_ptr->data[s_ptr->top]) {
+		STKERR(E_STACK_ABNORMAL);
+		return NULL;
+	}
+
+	size_t size = s_ptr->entry_sizes[s_ptr->top];
+	ret = malloc(size);
+	if (!ret) {
 		STKERR(E_STACK_ALLOC_FAILED);
-		stack_cleanup(s_ptr, NULL);
-		return (NULL);
+		stack_cleanup(&s_ptr, NULL);
+		return NULL;
 	}
-	memcpy(ret, s_ptr->data[s_ptr->top], s_ptr->entry_sizes[s_ptr->top]);
+
+	memcpy(ret, s_ptr->data[s_ptr->top], size);
 	free(s_ptr->data[s_ptr->top]);
 	s_ptr->data[s_ptr->top] = NULL;
 	s_ptr->top--;
-	return (ret);
+
+	return ret;
 }
 
 void	*stack_peek(t_stack s_ptr){
@@ -93,7 +90,7 @@ void	*stack_peek(t_stack s_ptr){
 }
 
 bool	stack_empty(t_stack s_ptr){
-	return (s_ptr->top == -1);
+	return ((s_ptr->top == -1));
 }
 
 bool	stack_full(t_stack s_ptr){
@@ -120,17 +117,26 @@ int	stack_check(t_stack s_ptr){
 	return (E_STACK_ABNORMAL);
 }
 
-void	stack_cleanup(t_stack s_ptr, void (f)(void *)){
-	assert(s_ptr);
-	while (s_ptr->top > -1){
-		if (f){
-			f(s_ptr->data);
-		}
-		free(s_ptr->data[s_ptr->top]);
-		s_ptr->data[s_ptr->top] = NULL;
-		s_ptr->top--;
+void	stack_cleanup(t_stack *s_ptr, void (*f)(void *)) {
+	if (!s_ptr || !*s_ptr)
+		return;
+
+	t_stack s = *s_ptr;
+
+	while (s->top >= 0) {
+		void *elem = s->data[s->top];
+
+		if (f && elem)
+			f(elem);
+
+		free(elem);
+		s->data[s->top] = NULL;
+		s->top--;
 	}
-	free(s_ptr->entry_sizes);
-	free(s_ptr);
-	s_ptr = NULL;
+
+	free(s->data);
+	free(s->entry_sizes);
+	free(s);
+
+	*s_ptr = NULL;
 }
