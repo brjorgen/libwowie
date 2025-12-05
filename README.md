@@ -53,8 +53,6 @@ see [module\_name]/todo.org
 
 <a id="orgc314794"></a>
 
-## Code your own stuff - HMU on twitter if you think it's worth telling me about 🤓
-
 1.  Implement your extension & its Makefile (ideally with a rule for building a test binary).
 2.  Implement it's error() stuff.
 3.  Add it to the master Makefile.
