@@ -5,11 +5,13 @@ INC=	./wowie_tree.h
 
 SRC=	./tree_delete.c \
 	./tree_insert.c \
+	./tree_search.c \
 	./tree_map.c \
 	./tree_new.c
 
 OBJ=	./tree_delete.o \
 	./tree_insert.o \
+	./tree_search.o \
 	./tree_map.o \
 	./tree_new.o
 
@@ -26,7 +28,7 @@ fclean: clean
 	rm $(NAME)
 
 test: all
-	$(CC) $(CFLAGS) -g -o tree-test $(NAME) ./tree_test.c ./wowie_tree_error.c ../../error/error.c ../../mem/memdup.c
+	$(CC) -g -o tree-test $(NAME) ./tree-test.c ./wowie_tree_error.c ../../error/error.c ../../mem/*.c
 	codesign -s - -v -f --entitlements ./debug.plist tree-test
 
 test-clean: fclean
