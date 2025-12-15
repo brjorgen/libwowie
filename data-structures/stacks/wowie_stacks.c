@@ -1,7 +1,7 @@
 #include "./wowie_stacks.h"
 #include <stdbool.h>
 
-t_stack	stack_new(size_t max_entries){
+t_stack stack_new(size_t max_entries){
 	t_stack ret;
 	size_t allocation_size;
 
@@ -12,15 +12,16 @@ t_stack	stack_new(size_t max_entries){
 	}
 
 	allocation_size = (max_entries == 0 ? STACK_DEFAULT_SIZE : max_entries);
-	ret->data = malloc(allocation_size);
+
+	ret->data = malloc(sizeof(void *) * allocation_size);
 	if (!ret->data){
 		STKERR(E_STACK_ALLOC_FAILED);
 		free(ret);
 		return (NULL);
 	}
-	bzero(ret->data, allocation_size);
+	bzero(ret->data, sizeof(void *) * allocation_size);
 
-	ret->entry_sizes = (size_t *)malloc(sizeof(size_t) * allocation_size);
+	ret->entry_sizes = malloc(sizeof(size_t) * allocation_size);
 	if (!ret->entry_sizes){
 		STKERR(E_STACK_ALLOC_FAILED);
 		free(ret->data);
@@ -31,7 +32,8 @@ t_stack	stack_new(size_t max_entries){
 	ret->max_entries = allocation_size;
 	ret->top = -1;
 	ret->__debug_mem_usage = 0;
-	return (ret);
+
+	return ret;
 }
 
 void	stack_push(t_stack s_ptr, void *to_push, size_t entry_size){
@@ -61,20 +63,21 @@ void *stack_pop(t_stack s_ptr) {
 
 	if (!s_ptr || s_ptr->top == -1) {
 		STKERR(E_STACK_EMPTY);
-		return NULL;
+		return (NULL);
 	}
 
 	if (!s_ptr->data[s_ptr->top]) {
 		STKERR(E_STACK_ABNORMAL);
-		return NULL;
+		return (NULL);
 	}
 
 	size_t size = s_ptr->entry_sizes[s_ptr->top];
 	ret = malloc(size);
+
 	if (!ret) {
 		STKERR(E_STACK_ALLOC_FAILED);
 		stack_cleanup(&s_ptr, NULL);
-		return NULL;
+		return (NULL);
 	}
 
 	memcpy(ret, s_ptr->data[s_ptr->top], size);
@@ -82,7 +85,7 @@ void *stack_pop(t_stack s_ptr) {
 	s_ptr->data[s_ptr->top] = NULL;
 	s_ptr->top--;
 
-	return ret;
+	return (ret);
 }
 
 void	*stack_peek(t_stack s_ptr){
@@ -94,26 +97,32 @@ bool	stack_empty(t_stack s_ptr){
 }
 
 bool	stack_full(t_stack s_ptr){
-	return ((size_t)s_ptr->top == s_ptr->max_entries);
+	return ((size_t)s_ptr->top == s_ptr->max_entries - 1);
 }
 
 int	stack_top(t_stack s_ptr){
-	return(s_ptr->top);
+	return (s_ptr->top);
 }
 
 int	stack_check(t_stack s_ptr){
 	bool empty = stack_empty(s_ptr);
 	bool full = stack_full(s_ptr);
+
 	if (!empty && !full){
 		STKERR(E_STACK_OK);
 		return (E_STACK_OK);
 	}
+
 	if (empty){
 		STKERR(E_STACK_EMPTY);
+		return (E_STACK_EMPTY);
 	}
+
 	if (full){
 		STKERR(E_STACK_FULL);
+		return (E_STACK_EMPTY);
 	}
+
 	return (E_STACK_ABNORMAL);
 }
 
