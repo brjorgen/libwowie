@@ -59,6 +59,6 @@ hashmap_t		*hashmap_init(uint32_t size);
 e_hashmap_return_code	hashmap_destroy(hashmap_t **hashmap);
 e_hashmap_return_code	hashmap_item_insert(hashmap_t *hashmap, item_t *item);
 e_hashmap_return_code	hashmap_item_delete(hashmap_t *hashmap, char *key);
-item_t			*hashmap_item_get(hashmap_t *hashmap,
-					  char      *key);
+item_t                  *hashmap_item_get(hashmap_t *hashmap, char *key);
+uint32_t		hash(uint8_t *key, uint32_t compressor, uint32_t seed);
 #endif /* BULLSHIT_SRC_H_ */
