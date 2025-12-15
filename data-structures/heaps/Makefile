@@ -15,5 +15,5 @@ fclean: clean
 	rm $(NAME)
 
 test: all
-	@$(CC) $(NAME) heap_test.c ../../mem/memset.c -o heap-test
+	@$(CC) $(NAME) heaps-test.c ../../mem/memset.c -o heap-test
 	@echo "Compiled heap test executable."
